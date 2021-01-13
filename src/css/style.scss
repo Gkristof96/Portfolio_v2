@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$colors: (
+    primary: #0092CA,
+    light-gray: #757575,
+    dark-gray: #393E46,
+    dark: #212121,
+);
+
+// Functions
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    
+}

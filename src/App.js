@@ -1,9 +1,11 @@
-import './App.css';
+import './App.css'
+import './css/style.css'
+import Header from './components/Header'
 
 function App() {
   return (
     <div className="App">
-      Hey there
+      <Header />
     </div>
   );
 }
