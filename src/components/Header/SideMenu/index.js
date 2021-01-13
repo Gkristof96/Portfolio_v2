@@ -1,9 +1,9 @@
 import React from 'react'
 
-const SideMenu = () => {
+const SideMenu = ({isMenuOpen, handleOpen}) => {
     return (
         <>
-            <nav>
+            <nav className={`sidemenu ${isMenuOpen && 'open'}`} onClick={handleOpen}>
                 <ul>
                     <li><a href='#'>About</a></li>
                     <li><a href='#'>Projects</a></li>

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const HamburgerIcon = () => {
+const HamburgerIcon = ({isMenuOpen, handleOpen}) => {
     return (
         <>
-            <button>
+            <button className={`toggle-button ${isMenuOpen && 'open'}`} onClick={handleOpen}>
                 <div className='line' />
                 <div className='line' />
                 <div className='line' />
