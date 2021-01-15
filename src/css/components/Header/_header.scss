@@ -1,0 +1,45 @@
+@import './Navbar/navbar';
+@import './SideMenu/sidemenu';
+
+header {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .social-icons {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icon {
+            color: #212121;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:first-child {
+                margin-right: 15px;
+            }
+
+            &:hover {
+                color: #0092CA;
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        .social-icons {
+            display: none;
+        }
+    }
+}

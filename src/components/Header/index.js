@@ -11,12 +11,12 @@ const Header = () => {
         <>
             <header>
                 <Navbar handleOpen={handleOpen} isMenuOpen={isMenuOpen}/>
-                <div clasName='social-icons'>
-                    <AiFillLinkedin />
-                    <AiFillGithub />
+                <div className='social-icons'>
+                    <AiFillLinkedin className='icon'/>
+                    <AiFillGithub className='icon'/>
                 </div>
-                <SideMenu handleOpen={handleOpen} isMenuOpen={isMenuOpen}/>
             </header>
+            <SideMenu handleOpen={handleOpen} isMenuOpen={isMenuOpen}/>
         </>
     )
 }

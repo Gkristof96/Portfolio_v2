@@ -1,0 +1,68 @@
+@import './HamburgerIcon/hamburgericon';
+
+.main-navbar {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: calc((100vw - 1400px) /2);
+    
+    .logo {
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 44px;
+        display: flex;
+        align-items: center;
+
+        color: #EEEEEE;
+    }
+    nav ul{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding-right: 25px;
+        li {
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 0 15px;
+
+            a {
+                text-decoration: none;
+                color: #EEEEEE;
+                transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                &:hover {
+                    color: #0092CA;
+                    transform: translateY(-3px);
+                    font-weight: bold;
+                }
+            }
+        }
+
+    }
+    .hamburger-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-navbar {
+        width: 100%;
+        padding: 0 25px;
+        nav {
+            display: none;
+        }
+        .hamburger-icon {
+            display: block;
+        }
+    }
+}

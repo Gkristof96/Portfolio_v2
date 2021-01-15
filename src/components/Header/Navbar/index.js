@@ -19,13 +19,13 @@ const Navbar = ({isMenuOpen, handleOpen}) => {
     return (
         <>
             <div className={`main-navbar ${(isMenuOpen || scroll) && 'open'}`}>
-                <a href='/'>Kristof's Portfolio</a>
+                <a className='logo' href='/'>Kristof's Portfolio</a>
                 <nav>
                     <ul>
-                        <li><a href='#'>About</a></li>
-                        <li><a href='#'>Projects</a></li>
-                        <li><a href='#'>Skills</a></li>
-                        <li><a href='#'>Contact</a></li>
+                        <li><a href='#about'>About</a></li>
+                        <li><a href='#projects'>Projects</a></li>
+                        <li><a href='#skills'>Skills</a></li>
+                        <li><a href='#contact'>Contact</a></li>
                     </ul>
                 </nav>
                 <div className='hamburger-icon'>

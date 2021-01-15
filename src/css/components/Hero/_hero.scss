@@ -1,0 +1,92 @@
+.hero {
+    height: 90vh;
+    width: 100%;
+    background: white;
+    position: relative;
+    z-index: 1;
+    .video-container {
+        width: 85%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        overflow: hidden;
+
+        .video {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            background: #232a34;
+        }
+        
+        .triangle {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            bottom: -2px;
+            left: 2px;
+        }
+    }
+    .hero-container {
+        width: 85%;
+        height: 90vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        padding-left: calc((100vw - 1400px) /2);
+        background: transparent;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        h1 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 78px;
+
+            color: #EEEEEE;
+        }
+        h2 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 59px;
+
+            color: #EEEEEE;
+            margin-bottom: 10px;
+            span {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 59px;
+
+                color: #0092CA;
+            }
+        }
+        p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 44px;
+            padding-right: 50px;
+            color: #EEEEEE;
+            margin-bottom: 25px;
+        }
+
+        button {
+            height: 50px;
+            width: 200px;
+            background: #0092CA;
+            color: #eee;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 29px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+    }
+}

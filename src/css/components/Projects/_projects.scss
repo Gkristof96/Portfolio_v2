@@ -1,0 +1,32 @@
+.projects {
+    height: 100vh;
+    display: flex;
+    .empty-container {
+        width: 10%;
+        height: 100%;
+        background: white;
+    }
+
+    .projects-container {
+        width: 90%;
+        height: 100%;
+        background: #22313F;
+        position: relative;
+
+        .vector {
+            width: 100%;
+            height: auto;
+            position: absolute;
+        }
+
+        .up {
+            top: -4px;
+            right: 0;
+        }
+
+        .bottom {
+            bottom: -4px;
+            right: 0;
+        }
+    }
+}

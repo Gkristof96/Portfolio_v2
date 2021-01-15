@@ -1,4 +1,518 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.toggle-button {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.toggle-button .line {
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  background: #eee;
+  position: absolute;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+.toggle-button .line:first-child {
+  top: 0;
+  left: 0;
+}
+
+.toggle-button .line:nth-child(2) {
+  width: 16px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.toggle-button .line:last-child {
+  width: 22px;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.toggle-button:hover .line:last-child {
+  width: 30px;
+}
+
+.toggle-button:hover .line:nth-child(2) {
+  widtH: 30px;
+}
+
+.toggle-button.open .line:first-child {
+  -webkit-transform: rotate(45deg) translate(9px, 10px);
+          transform: rotate(45deg) translate(9px, 10px);
+}
+
+.toggle-button.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-button.open .line:last-child {
+  width: 30px;
+  -webkit-transform: rotate(-45deg) translate(9px, -10px);
+          transform: rotate(-45deg) translate(9px, -10px);
+}
+
+.main-navbar {
+  height: 100%;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: calc((100vw - 1400px) /2);
+}
+
+.main-navbar .logo {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #EEEEEE;
+}
+
+.main-navbar nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding-right: 25px;
+}
+
+.main-navbar nav ul li {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.main-navbar nav ul li a {
+  text-decoration: none;
+  color: #EEEEEE;
+  -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.main-navbar nav ul li a:hover {
+  color: #0092CA;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  font-weight: bold;
+}
+
+.main-navbar .hamburger-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .main-navbar {
+    width: 100%;
+    padding: 0 25px;
+  }
+  .main-navbar nav {
+    display: none;
+  }
+  .main-navbar .hamburger-icon {
+    display: block;
+  }
+}
+
+.sidemenu {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .sidemenu {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .social-icons {
+  width: 15%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .social-icons .icon {
+  color: #212121;
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+header .social-icons .icon:first-child {
+  margin-right: 15px;
+}
+
+header .social-icons .icon:hover {
+  color: #0092CA;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+@media screen and (max-width: 768px) {
+  header .social-icons {
+    display: none;
+  }
+}
+
+.hero {
+  height: 90vh;
+  width: 100%;
+  background: white;
+  position: relative;
+  z-index: 1;
+}
+
+.hero .video-container {
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero .video-container .video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background: #232a34;
+}
+
+.hero .video-container .triangle {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: -2px;
+  left: 2px;
+}
+
+.hero .hero-container {
+  width: 85%;
+  height: 90vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  padding-left: calc((100vw - 1400px) /2);
+  background: transparent;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero .hero-container h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 78px;
+  color: #EEEEEE;
+}
+
+.hero .hero-container h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+  color: #EEEEEE;
+  margin-bottom: 10px;
+}
+
+.hero .hero-container h2 span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  color: #0092CA;
+}
+
+.hero .hero-container p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  padding-right: 50px;
+  color: #EEEEEE;
+  margin-bottom: 25px;
+}
+
+.hero .hero-container button {
+  height: 50px;
+  width: 200px;
+  background: #0092CA;
+  color: #eee;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 29px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.about {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about .empty-container {
+  width: 10%;
+  background: white;
+  height: 100%;
+}
+
+.about .about-container {
+  width: 90%;
+  height: 100%;
+  background: #393E46;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: calc((100vw - 1400px) /2);
+}
+
+.about .about-container .vector {
+  width: 100%;
+  position: absolute;
+  height: auto;
+}
+
+.about .about-container .up {
+  top: -4px;
+  left: 0;
+}
+
+.about .about-container .bottom {
+  bottom: -4px;
+  left: 0;
+}
+
+.about .about-container .about-content {
+  height: 350px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
+  grid-column-gap: 50px;
+}
+
+.about .about-container .about-content .leftbar img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -50px;
+  height: 350px;
+  border-radius: 5px;
+  -webkit-filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.about .about-container .about-content .rightbar h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  color: #0092CA;
+}
+
+.about .about-container .about-content .rightbar h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+  color: #FFFFFF;
+}
+
+.about .about-container .about-content .rightbar p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: justify;
+  color: #b5b5b5;
+}
+
+.projects {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects .empty-container {
+  width: 10%;
+  height: 100%;
+  background: white;
+}
+
+.projects .projects-container {
+  width: 90%;
+  height: 100%;
+  background: #22313F;
+  position: relative;
+}
+
+.projects .projects-container .vector {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.projects .projects-container .up {
+  top: -4px;
+  right: 0;
+}
+
+.projects .projects-container .bottom {
+  bottom: -4px;
+  right: 0;
+}
+
+.skills {
+  height: 100vh;
+}
+
+.skills .skill-container {
+  widtH: 100%;
+  height: 100%;
+  position: relative;
+  background: #212121;
+}
+
+.skills .skill-container .vector {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+
+.contact {
+  height: 100vh;
+}
+
+.contact .contact-container {
+  widtH: 100%;
+  height: 100%;
+  position: relative;
+  background: white;
+}
+
+.contact .contact-container .vector {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+footer {
+  height: 150px;
+  width: 100%;
+  background: #393E46;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,5 +523,17 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background: white;
+}
+
+.section {
+  width: 100%;
+}
+
+.vector {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */

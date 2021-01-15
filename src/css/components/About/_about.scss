@@ -1,0 +1,80 @@
+.about {
+    height: 100vh;
+    display: flex;
+    .empty-container {
+        width: 10%;
+        background: white;
+        height: 100%;
+    }
+    .about-container {
+        width: 90%;
+        height: 100%;
+        background: #393E46;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-right: calc((100vw - 1400px) /2);
+        .vector {
+            width: 100%;
+            position: absolute;
+            height: auto;
+        }
+        .up {
+            top: -4px;
+            left: 0;
+        }
+        .bottom {
+            bottom: -4px;
+            left: 0;
+        }
+        .about-content {
+            height: 350px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            grid-column-gap: 50px;
+            .leftbar {
+                img {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -50px;
+                    height: 350px;
+                    border-radius: 5px;
+                    filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
+                }
+            }
+            .rightbar {
+                h1 {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 28px;
+                    line-height: 33px;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    color: #0092CA;
+                }
+                h2 {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 36px;
+                    line-height: 42px;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 25px;
+                    color: #FFFFFF;
+                }
+                p {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 24px;
+                    line-height: 28px;
+                    text-align: justify;
+
+                    color: #b5b5b5;
+                }
+            }
+        }
+    }
+}
