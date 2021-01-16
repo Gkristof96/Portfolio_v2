@@ -1,0 +1,29 @@
+.fullbar {
+    margin: 35px 0;
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    background: #c4c4c4;
+    .valuebar {
+        height: 40px;
+        background: #0092ca;
+        position: relative;
+        border-radius: 5px 0 0 5px;
+        .title {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            font-size: 18px;
+            color: #eee;
+        }
+        .percent {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            font-size: 18px;
+            color: #eee;
+        }
+    }
+}
