@@ -1,9 +1,16 @@
+@import './ContactCard/contactcard';
+
 .contact {
     height: 100vh;
+    
     .contact-container {
         widtH: 100%;
         height: 100%;
         position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 calc((100vw - 1400px) /2);
+        padding-bottom: 100px;
         background: white;
 
         .vector {
@@ -12,6 +19,65 @@
             position: absolute;
             bottom: -4px;
             left: 0;
+        }
+        .contact-content {
+            display: grid;
+            width: 100%;
+            padding: calc((100vh - 600px) /2) 0;
+            grid-template-columns: 450px 1fr;
+            grid-column-gap: 50px;
+            .rightbar {
+                h1 {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 28px;
+                    line-height: 34px;
+
+                    color: #0092CA;
+                    margin-bottom: 10px;
+                }
+                h2 {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 36px;
+                    line-height: 44px;
+                    display: flex;
+                    align-items: center;
+
+                    color: #474646;
+                    margin-bottom: 25px;
+                }
+                p {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 24px;
+                    line-height: 29px;
+                    text-align: justify;
+
+                    color: #212121;
+                    margin-bottom: 25px;
+                }
+                ul {
+                    list-style: none;
+                    li {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 28px;
+                        line-height: 34px;
+                        display: flex;
+                        align-items: center;
+                        text-align: justify;
+
+                        color: #212121;
+                        margin-bottom: 25px;
+                        .icon {
+                            margin-right: 5px;
+                            color: #212121;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }
