@@ -1,0 +1,35 @@
+.project-card {
+    width: 420px;
+    height: 500px;
+    margin-right: 25px;
+    background: #C4C4C4;
+    border-radius: 10px;
+    padding: 25px 40px;
+    img {
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 10px;
+        color: #757575;
+    }
+    button {
+        border: none;
+        outline: none;
+        width: 100%;
+        background: #0092CA;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        height: 50px;
+
+        color: #000000;
+    }
+}

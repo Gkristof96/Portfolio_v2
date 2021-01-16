@@ -2,7 +2,7 @@
 
 .skills {
     height: 100vh;
-    .skill-container {
+    .skills-container {
         widtH: 100%;
         height: 100%;
         position: relative;
@@ -54,6 +54,28 @@
                     text-align: justify;
 
                     color: #C4C4C4;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skills{
+        height: auto;
+        margin-bottom: 5px;
+        .skills-container {
+            padding: 0 25px; 
+            .skills-content {
+                height: auto;
+                padding: 100px 0;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr auto;
+                grid-row-gap: 25px;
+                .leftbar {
+                }
+                .rightbar {
+                    justify-self: center;
                 }
             }
         }

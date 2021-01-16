@@ -27,3 +27,13 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .fullbar {
+        width: 275px;
+        height: 30px;
+        .valuebar {
+            height: 30px;
+        }
+    }
+}

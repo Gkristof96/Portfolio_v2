@@ -35,10 +35,7 @@
             grid-column-gap: 50px;
             .leftbar {
                 img {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    left: -50px;
+                    width: 350px;
                     height: 350px;
                     border-radius: 5px;
                     filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
@@ -48,7 +45,7 @@
                 h1 {
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 28px;
+                    font-size: clamp(1rem,5vw,1.5rem);
                     line-height: 33px;
                     display: flex;
                     align-items: center;
@@ -58,7 +55,7 @@
                 h2 {
                     font-style: normal;
                     font-weight: bold;
-                    font-size: 36px;
+                    font-size: clamp(1.2rem,5vw,2rem);
                     line-height: 42px;
                     display: flex;
                     align-items: center;
@@ -68,11 +65,50 @@
                 p {
                     font-style: normal;
                     font-weight: normal;
-                    font-size: 24px;
+                    font-size: clamp(0.8rem,4vw,1.3rem);
                     line-height: 28px;
                     text-align: justify;
 
                     color: #b5b5b5;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        height: auto;
+        margin-bottom: 5px;
+        .empty-container {
+            display: none;
+        }
+        .about-container {
+            width: 100%;
+            padding: 0 25px; 
+            .about-content {
+                height: auto;
+                padding: 100px 0;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-row-gap: 25px;
+                .leftbar {
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        width: 280px;
+                        height: 280px;
+                    }
+                }
+                .rightbar {
+                    h1 {
+                        margin-bottom: 10px;
+                        line-height: 30px;
+                    }
+                    h2 {
+                        margin-bottom: 15px;
+                        line-height: 40px;
+                    }
                 }
             }
         }

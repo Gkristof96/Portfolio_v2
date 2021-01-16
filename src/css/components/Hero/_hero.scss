@@ -43,7 +43,7 @@
         h1 {
             font-style: normal;
             font-weight: bold;
-            font-size: 64px;
+            font-size: clamp(2rem,8vw,4rem);
             line-height: 78px;
 
             color: #EEEEEE;
@@ -51,7 +51,7 @@
         h2 {
             font-style: normal;
             font-weight: 600;
-            font-size: 48px;
+            font-size: clamp(1.5rem,4vw,2.6rem);
             line-height: 59px;
 
             color: #EEEEEE;
@@ -59,7 +59,7 @@
             span {
                 font-style: normal;
                 font-weight: bold;
-                font-size: 48px;
+                font-size: clamp(1.5rem,4vw,2.6rem);
                 line-height: 59px;
 
                 color: #0092CA;
@@ -68,7 +68,7 @@
         p {
             font-style: normal;
             font-weight: 500;
-            font-size: 36px;
+            font-size: clamp(1rem,4vw,2rem);
             line-height: 44px;
             padding-right: 50px;
             color: #EEEEEE;
@@ -87,6 +87,20 @@
             border: none;
             border-radius: 10px;
             outline: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        .video-container {
+            width: 100%;
+        }
+        .hero-container {
+            padding: 100px 25px;
+            p {
+                padding-right: 0;
+            }
         }
     }
 }

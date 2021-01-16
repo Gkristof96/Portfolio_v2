@@ -81,3 +81,26 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .contact{
+        height: auto;
+        margin-bottom: 5px;
+        .contact-container {
+            padding: 0 25px; 
+            .contact-content {
+                height: auto;
+                padding: 100px 0;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 'text' 'card';
+                .leftbar {
+                    justify-self: center
+                }
+                .rightbar {
+                    grid-area: text;
+                }
+            }
+        }
+    }
+}

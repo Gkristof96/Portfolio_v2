@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiOutlineYoutube, AiOutlineFacebook, AiOutlineTwitter, AiOutlineInstagram } from 'react-icons/ai'
+import { AiOutlineFacebook, AiOutlineTwitter, AiOutlineInstagram } from 'react-icons/ai'
 
 const Footer = () => {
     return (
@@ -21,7 +21,6 @@ const Footer = () => {
                         <AiOutlineFacebook className='icon'/>
                         <AiOutlineTwitter className='icon'/>
                         <AiOutlineInstagram className='icon'/>
-                        <AiOutlineYoutube className='icon'/>
                     </div>
                     <h1 className='copyright'>Copyright © Cross Gym</h1>
                 </div>
