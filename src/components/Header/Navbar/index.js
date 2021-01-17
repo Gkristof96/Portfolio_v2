@@ -1,24 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import HamburgerIcon from './HamburgerIcon'
 
 const Navbar = ({isMenuOpen, handleOpen}) => {
-    const [scroll, setScroll] = useState(false);
-
-    const  changeNav = () => {
-        if(window.scrollY >= 80) {
-            setScroll(true)
-        }
-        else {
-            setScroll(false)
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll',changeNav)
-    },[])
     return (
         <>
-            <div className={`main-navbar ${(isMenuOpen || scroll) && 'open'}`}>
+            <div className={`main-navbar ${isMenuOpen && 'open'}`}>
                 <a className='logo' href='/'>Kristof's Portfolio</a>
                 <nav>
                     <ul>

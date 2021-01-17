@@ -40,7 +40,7 @@
             label {
                 font-style: normal;
                 font-weight: 600;
-                font-size: 18px;
+                font-size: clamp(0.8rem,4vw,1rem);
                 line-height: 22px;
                 display: flex;
                 align-items: center;
@@ -82,7 +82,7 @@
             border-radius: 10px;
             font-style: normal;
             font-weight: 600;
-            font-size: 24px;
+            font-size: clamp(0.8rem,4vw,1.3rem);
             line-height: 29px;
 
             color: #FFFFFF;
@@ -101,7 +101,6 @@
 @media screen and (max-width: 768px) {
     .contact-card {
         width: 270px;
-        grid-row: 2/3;
         form {
             .input-group {
                 input {

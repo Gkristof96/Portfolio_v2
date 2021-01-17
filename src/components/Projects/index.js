@@ -7,11 +7,11 @@ const Projects = () => {
     const [current,setCurrent] = useState(0)
 
     const handleLeftClick = () => {
-        current === 0 ? setCurrent(-445 * (3 - 1)) : setCurrent(current + 445);
+        current === 0 ? setCurrent(-430 * (3 - 1)) : setCurrent(current + 430);
       };
       // jobbra léptető függvény 680-al lép jobbra ha nem az utolsó elemnél vagyunk
     const handleRightClick = () => {
-        current === -445 * (3 - 1) ? setCurrent(0) : setCurrent(current - 445);
+        current === -430 * (3 - 1) ? setCurrent(0) : setCurrent(current - 430);
     };
     return (
         <>
@@ -21,9 +21,9 @@ const Projects = () => {
                     <img className='vector bottom' src='vector_5.svg' alt='vector' />
                     <div className='project-content'>
                         <div className='leftbar'>
-                            {/*<div className='card-slider' style={{ transform: `translateX(${current}px)` }}>
+                            <div className='card-slider' style={{ transform: `translateX(${current}px)` }}>
                                 {projectData.map((data,i) => <ProjectCard data={data} key={i}/>)}
-                            </div>*/}
+                            </div>
                         </div>
                         <div className='rightbar'>
                             <h1>Projektek</h1>

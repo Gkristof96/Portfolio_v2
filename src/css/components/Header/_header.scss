@@ -12,7 +12,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     .social-icons {
         width: 15%;
         height: 100%;
@@ -37,9 +37,16 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-    header {
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
         .social-icons {
             display: none;
+        }
+        &.scroll {
+            position: fixed;
+            background: #393E46;
         }
     }
 }

@@ -101,9 +101,8 @@ footer {
                 grid-template-columns: 1/2;
                 align-self: center;
                 justify-self: center;
-
-                ul {
-
+                ul li a {
+                    padding-right: 15px;
                 }
             }
 

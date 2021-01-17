@@ -1,15 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
 import SideMenu from './SideMenu'
 
 const Header = () => {
     const [isMenuOpen,setMenuOpen] = useState(false)
+    const [scroll, setScroll] = useState(false)
 
     const handleOpen = () => setMenuOpen(!isMenuOpen)
+
+    const  changeNav = () => {
+        if(window.scrollY >= 80) {
+            setScroll(true)
+        }
+        else {
+            setScroll(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll',changeNav)
+    },[])
     return (
         <>
-            <header>
+            <header className={`${(isMenuOpen || scroll) && 'scroll'}`}>
                 <Navbar handleOpen={handleOpen} isMenuOpen={isMenuOpen}/>
                 <div className='social-icons'>
                     <AiFillLinkedin className='icon'/>
