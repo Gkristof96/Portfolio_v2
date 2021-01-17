@@ -1,8 +1,9 @@
 import React from 'react'
 import ContactCard from './ContactCard'
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa'
+import SectionText from '../SectionText'
 
-const Contact = () => {
+const Contact = ({data}) => {
     return (
         <>
             <section className='contact section' id='contact'>
@@ -11,9 +12,7 @@ const Contact = () => {
                             <ContactCard />
                         </div>
                         <div className='rightbar'>
-                            <h1>Kapcsolat</h1>
-                            <h2>Írj egy üzenetet</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <SectionText data={data}/>
                             <ul>
                                 <li><FaEnvelope className='icon' />kristef.g@gmail.com</li>
                                 <li><FaPhoneAlt className='icon' />+36 30 123 4567</li>

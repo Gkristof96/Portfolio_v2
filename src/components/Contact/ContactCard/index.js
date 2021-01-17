@@ -38,11 +38,11 @@ const ContactCard = () => {
     return (
         <>
             <div className='contact-card'>
-                <h1>Do you have a question?</h1>
-                <h2>Complete this form, and we will answer it!</h2>
+                <h1>Kérdésed van?</h1>
+                <h2>Töltsd ki az űrlapot és válaszolok!</h2>
                 <form onSubmit={handleSubmit}>
                     <div className='input-group'>
-                        <label>Name</label>
+                        <label>Név</label>
                         <input type="text" name='name' placeholder='Sebastion Montgomeri' value={values.name} onChange={handleChange}/>
                     </div>
                     {errors.name && 
@@ -62,7 +62,7 @@ const ContactCard = () => {
                         </p>
                     }
                     <div className='input-group'>
-                        <label>Message</label>
+                        <label>Üzenet</label>
                         <textarea name='message' value={values.message} onChange={handleChange}/>
                     </div>
                     {errors.message && 
@@ -71,7 +71,7 @@ const ContactCard = () => {
                         {errors.message}
                         </p>
                     }
-                    <button type='submit'>Send</button>
+                    <button type='submit'>Küldés</button>
                 </form>
             </div>
         </>

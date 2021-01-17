@@ -22,7 +22,7 @@ const Footer = () => {
                         <AiOutlineTwitter className='icon'/>
                         <AiOutlineInstagram className='icon'/>
                     </div>
-                    <h1 className='copyright'>Copyright © Cross Gym</h1>
+                    <h1 className='copyright'>Copyright © Gerencsér Kristóf</h1>
                 </div>
             </footer>
         </>

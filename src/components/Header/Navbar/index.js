@@ -8,10 +8,10 @@ const Navbar = ({isMenuOpen, handleOpen}) => {
                 <a className='logo' href='/'>Kristof's Portfolio</a>
                 <nav>
                     <ul>
-                        <li><a href='#about'>About</a></li>
-                        <li><a href='#projects'>Projects</a></li>
-                        <li><a href='#skills'>Skills</a></li>
-                        <li><a href='#contact'>Contact</a></li>
+                        <li><a href='#about'>Rólam</a></li>
+                        <li><a href='#projects'>Projektek</a></li>
+                        <li><a href='#skills'>Készségek</a></li>
+                        <li><a href='#contact'>Kapcsolat</a></li>
                     </ul>
                 </nav>
                 <div className='hamburger-icon'>

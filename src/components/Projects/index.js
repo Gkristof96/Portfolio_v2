@@ -1,9 +1,10 @@
 import React,{ useState } from 'react'
 import { FaCaretLeft, FaCaretRight } from 'react-icons/fa'
 import ProjectCard from './ProjectCard'
+import SectionText from '../SectionText'
 import { projectData } from '../../data/projects';
 
-const Projects = () => {
+const Projects = ({data}) => {
     const [current,setCurrent] = useState(0)
 
     const handleLeftClick = () => {
@@ -26,9 +27,7 @@ const Projects = () => {
                             </div>
                         </div>
                         <div className='rightbar'>
-                            <h1>Projektek</h1>
-                            <h2>Eddigi projektjeim</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                            <SectionText data={data}/>
                             <div className='pager'>
                                 <FaCaretLeft className='icon' onClick={handleLeftClick}/>
                                 <FaCaretRight className='icon' onClick={handleRightClick}/>

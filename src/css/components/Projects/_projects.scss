@@ -45,35 +45,6 @@
             }
             .rightbar {
                 padding-right: 100px;
-                h1 {
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: clamp(1rem,5vw,1.5rem);
-                    line-height: 33px;
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 10px;
-                    color: #0092CA;
-                }
-                h2 {
-                    font-style: normal;
-                    font-weight: bold;
-                    font-size: clamp(1.2rem,5vw,2rem);
-                    line-height: 42px;
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 25px;
-                    color: #FFFFFF;
-                }
-                p {
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: clamp(0.8rem,4vw,1.3rem);
-                    line-height: 28px;
-                    text-align: justify;
-                    margin-bottom: 25px;
-                    color: #b5b5b5;
-                }
                 .pager {
                     display: flex;
                     align-items: center;
@@ -127,7 +98,7 @@
                 }
                 .leftbar {
                     width: 420px;
-                    justify-self: center;
+                    justify-self: flex-start;
                 }
             }
         }

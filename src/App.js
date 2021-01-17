@@ -6,6 +6,7 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { sectionData } from './data/sections'
 
 function App() {
   return (
@@ -13,12 +14,12 @@ function App() {
       <Header />
       <Hero />
       <div className='filler' />
-      <About />
+      <About data={sectionData[0]}/>
       <div className='filler' />
-      <Projects />
+      <Projects data={sectionData[1]}/>
       <div className='filler' />
-      <Skills />
-      <Contact />
+      <Skills data={sectionData[2]}/>
+      <Contact data={sectionData[3]}/>
       <Footer />
     </>
   );
