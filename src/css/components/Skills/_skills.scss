@@ -19,7 +19,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-column-gap: 50px;
-            padding: calc((100vh - 600px)/2) 0;
+            padding: calc((100vh - 600px)) 0 calc((100vh - 600px) /2) 0;
+            .rightbar {
+                justify-self: center;
+            }
         }
     }
 }
@@ -36,9 +39,6 @@
                 grid-template-rows: 1fr auto;
                 grid-row-gap: 25px;
                 .leftbar {
-                }
-                .rightbar {
-                    justify-self: center;
                 }
             }
         }

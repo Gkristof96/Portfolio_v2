@@ -499,6 +499,8 @@ header .social-icons .icon:hover {
   background: #C4C4C4;
   border-radius: 10px;
   padding: 25px 40px;
+  -webkit-filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
 }
 
 .project-card img {
@@ -756,7 +758,12 @@ header .social-icons .icon:hover {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-column-gap: 50px;
-  padding: calc((100vh - 600px)/2) 0;
+  padding: calc((100vh - 600px)) 0 calc((100vh - 600px) /2) 0;
+}
+
+.skills .skills-container .skills-content .rightbar {
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -775,10 +782,6 @@ header .social-icons .icon:hover {
         grid-template-rows: 1fr auto;
     grid-row-gap: 25px;
   }
-  .skills .skills-container .skills-content .rightbar {
-    -ms-grid-column-align: center;
-        justify-self: center;
-  }
 }
 
 .contact-card {
@@ -789,6 +792,8 @@ header .social-icons .icon:hover {
       justify-self: center;
   width: 85%;
   min-height: 500px;
+  -webkit-filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
   background: #0092CA;
   border-radius: 5px;
   padding: 15px 30px;
