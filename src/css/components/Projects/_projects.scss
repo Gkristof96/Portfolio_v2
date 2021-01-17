@@ -18,12 +18,12 @@
         align-items: center;
         padding-left: calc((100vw - 1400px) /2);
         .up {
-            top: -4px;
+            top: -2px;
             right: 0;
         }
 
         .bottom {
-            bottom: -4px;
+            bottom: -2px;
             right: 0;
         }
         .project-content {
@@ -100,7 +100,6 @@
 
 @media screen and (max-width: 768px) {
     .projects {
-        margin-top: 5px;
         height: auto;
         .empty-container {
             display: none;
@@ -127,8 +126,20 @@
                     }
                 }
                 .leftbar {
-                    width: 320px;
+                    width: 420px;
                     justify-self: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .projects {
+        .projects-container {
+            .project-content {
+                .leftbar {
+                    width: 320px;
                     padding: 0 15px;
                 }
             }
