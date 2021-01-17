@@ -11,10 +11,7 @@
         align-items: center;
         padding: calc((100vw - 1400px) /2);
         .vector {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            top: -4px;
+            top: 0;
             left: 0;
         }
         .skills-content {
@@ -66,8 +63,7 @@
             padding: 0 25px; 
             .skills-content {
                 height: auto;
-                padding-top: 75px;
-                padding-bottom: 50px;
+                padding: 100px 0;
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr auto;
                 grid-row-gap: 25px;

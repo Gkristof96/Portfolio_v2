@@ -17,12 +17,6 @@
         display: flex;
         align-items: center;
         padding-left: calc((100vw - 1400px) /2);
-        .vector {
-            width: 100%;
-            height: auto;
-            position: absolute;
-        }
-
         .up {
             top: -4px;
             right: 0;
@@ -113,16 +107,15 @@
         }
         .projects-container {
             width: 100%;
-            padding: 0 15px;
             .project-content {
                 height: auto;
-                padding: 75px 0;
+                padding: 100px 0;
                 grid-template-columns: 1fr;
                 grid-template-rows: auto 1fr;
                 grid-row-gap: 25px;
                 grid-template-areas: 'text' 'cards';
                 .rightbar {
-                    padding: 0;
+                    padding: 0 25px;
                     grid-area: text;
                     .pager {
                         .icon {
@@ -134,7 +127,9 @@
                     }
                 }
                 .leftbar {
+                    width: 320px;
                     justify-self: center;
+                    padding: 0 15px;
                 }
             }
         }

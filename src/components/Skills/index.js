@@ -6,7 +6,7 @@ const Skills = () => {
         <>
             <section className='skills section' id='skills'>
                 <div className='skills-container'>
-                    <img className='vector' src='vector_6.svg' alt='vector' />
+                    <img className='vector' src='images/vectors/vector_6.svg' alt='vector' />
                     <div className='skills-content'>
                         <div className='leftbar'>
                             <h1>Skills</h1>

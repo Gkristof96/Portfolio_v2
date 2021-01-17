@@ -7,7 +7,7 @@ const Hero = () => {
             <section className='hero section'>
                 <div className='video-container'>
                     <video className='video' autoPlay loop muted src={Video} type='video/mp4'  />
-                    <img className='triangle' src='vector_1.svg' alt='vector' />
+                    <img className='vector up' src='images/vectors/vector_1.svg' alt='vector' />
                 </div>
                 <div className='hero-container'>
                     <h1>Üdvözöllek az oldalamon!</h1>

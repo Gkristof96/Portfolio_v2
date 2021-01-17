@@ -12,12 +12,8 @@
         padding: 0 calc((100vw - 1400px) /2);
         padding-bottom: 100px;
         background: white;
-
         .vector {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            bottom: 0;
+            bottom: -4px;
             left: 0;
         }
         .contact-content {
@@ -93,14 +89,15 @@
             padding: 0 25px; 
             .contact-content {
                 height: auto;
-                padding-top: 50px;
-                padding-bottom: 75px;
+                padding: 100px 0;
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr 1fr;
                 grid-template-areas: 'text' 'card';
                 .leftbar {
+                    justify-self: center;
                 }
                 .rightbar {
+                    height: auto;
                     grid-area: text;
                 }
             }

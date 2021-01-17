@@ -14,11 +14,6 @@
         display: flex;
         align-items: center;
         padding-right: calc((100vw - 1400px) /2);
-        .vector {
-            width: 100%;
-            position: absolute;
-            height: auto;
-        }
         .up {
             top: -4px;
             left: 0;
@@ -35,6 +30,10 @@
             grid-column-gap: 50px;
             .leftbar {
                 img {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -75px;
                     width: 350px;
                     height: 350px;
                     border-radius: 5px;
@@ -88,17 +87,18 @@
             padding: 0 25px; 
             .about-content {
                 height: auto;
-                padding-top: 100px;
-                padding-bottom: 75px;
+                padding: 100px 0;
                 grid-template-columns: 1fr;
-                grid-template-rows: 280px 1fr;
+                grid-template-rows: 270px 1fr;
                 grid-row-gap: 25px;
                 .leftbar {
                     display: flex;
                     justify-content: center;
                     img {
-                        width: 280px;
-                        height: 280px;
+                        position: static;
+                        transform: translateY(0);
+                        width: 270px;
+                        height: auto;
                     }
                 }
                 .rightbar {

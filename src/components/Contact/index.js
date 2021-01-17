@@ -7,7 +7,7 @@ const Contact = () => {
         <>
             <section className='contact section' id='contact'>
                 <div className='contact-container'>
-                    <img className='vector' src='vector_7.svg' alt='vector' />
+                    <img className='vector' src='images/vectors/vector_7.svg' alt='vector' />
                     <div className='contact-content'>
                         <div className='leftbar'>
                             <ContactCard />
