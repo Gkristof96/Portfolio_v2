@@ -9,7 +9,7 @@
         background: white;
     }
 
-    .projects-container {
+    .container {
         width: 90%;
         height: 100%;
         background: #22313F;
@@ -31,13 +31,13 @@
             width: 100%;
             display: grid;
             grid-template-columns: 420px 1fr;
-            grid-column-gap: 50px;
             .leftbar {
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
+                
                 .card-slider {
                     display: flex;
                     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -45,6 +45,7 @@
             }
             .rightbar {
                 padding-right: 100px;
+                margin-left: 50px;
                 .pager {
                     display: flex;
                     align-items: center;
@@ -69,14 +70,30 @@
     }
 }
 
+@media screen and (max-width: 1480px) {
+    .projects {
+        .container {
+            padding-left: 40px;
+            .project-content {
+                grid-template-columns: 290px 1fr;
+                .leftbar {
+                    align-items: flex-start;
+                    width: 290px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .projects {
         height: auto;
         .empty-container {
             display: none;
         }
-        .projects-container {
+        .container {
             width: 100%;
+            padding-left: 0;
             .project-content {
                 height: auto;
                 padding: 100px 0;
@@ -85,6 +102,7 @@
                 grid-row-gap: 25px;
                 grid-template-areas: 'text' 'cards';
                 .rightbar {
+                    margin-left: 0;
                     padding: 0 25px;
                     grid-area: text;
                     .pager {
@@ -98,7 +116,7 @@
                 }
                 .leftbar {
                     width: 420px;
-                    justify-self: flex-start;
+                    justify-self: center;
                 }
             }
         }
@@ -107,7 +125,7 @@
 
 @media screen and (max-width: 450px) {
     .projects {
-        .projects-container {
+        .container {
             .project-content {
                 .leftbar {
                     width: 320px;

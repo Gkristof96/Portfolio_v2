@@ -34,7 +34,13 @@
         color: #eee;
     }
 }
-
+@media screen and (max-width: 1480px) {
+    .project-card  {
+        width: 290px;
+        height: auto;
+        margin-right: 140px;
+    }
+}
 
 @media screen and (max-width: 450px) {
     .project-card {

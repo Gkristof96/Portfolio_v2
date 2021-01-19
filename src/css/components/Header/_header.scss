@@ -21,7 +21,7 @@ header {
         justify-content: center;
         .icon {
             color: #212121;
-            font-size: 2rem;
+            font-size: clamp(1rem,4vw,2rem);
             cursor: pointer;
             transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
             &:first-child {

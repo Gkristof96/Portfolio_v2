@@ -17,7 +17,7 @@ const Projects = ({data}) => {
     return (
         <>
             <section className='projects section' id='projects'>
-                <div className='projects-container'>
+                <div className='container'>
                     <img className='vector up' src='images/vectors/vector_4.svg' alt='vector' />
                     <img className='vector bottom' src='images/vectors/vector_5.svg' alt='vector' />
                     <div className='project-content'>

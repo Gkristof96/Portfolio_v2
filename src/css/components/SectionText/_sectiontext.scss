@@ -1,7 +1,7 @@
 .title {
     font-style: normal;
     font-weight: 500;
-    font-size: clamp(1rem,5vw,1.5rem);
+    font-size: clamp(1rem,3vw,1.5rem);
     line-height: 33px;
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@
 .description {
     font-style: normal;
     font-weight: bold;
-    font-size: clamp(1.2rem,5vw,2rem);
+    font-size: clamp(1.2rem,4vw,2rem);
     line-height: 42px;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@
 .text {
     font-style: normal;
     font-weight: normal;
-    font-size: clamp(0.8rem,4vw,1.3rem);
+    font-size: clamp(0.8rem,2vw,1.3rem);
     line-height: 28px;
     text-align: justify;
     margin-bottom: 25px;

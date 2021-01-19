@@ -6,7 +6,7 @@ const Skills = ({data}) => {
     return (
         <>
             <section className='skills section' id='skills'>
-                <div className='skills-container'>
+                <div className='container'>
                     <img className='vector' src='images/vectors/vector_6.svg' alt='vector' />
                     <div className='skills-content'>
                         <div className='leftbar'>

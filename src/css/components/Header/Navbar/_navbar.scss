@@ -13,42 +13,44 @@
         text-decoration: none;
         font-style: normal;
         font-weight: 800;
-        font-size: clamp(1rem,7vw,2rem);
+        font-size: clamp(1rem,4vw,2rem);
         line-height: 44px;
         display: flex;
         align-items: center;
 
         color: #EEEEEE;
     }
-    nav ul{
-        display: flex;
-        align-items: center;
-        list-style: none;
-        padding-right: 25px;
-        li {
-            text-transform: uppercase;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 22px;
+    nav {
+        ul{
             display: flex;
             align-items: center;
-            text-align: center;
-            padding: 0 15px;
+            list-style: none;
+            padding-right: 10px;
+            li {
+                text-transform: uppercase;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 22px;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                padding: 10px;
 
-            a {
-                text-decoration: none;
-                color: #EEEEEE;
-                transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                a {
+                    text-decoration: none;
+                    color: #EEEEEE;
+                    font-size: clamp(0.6rem,1.8vw,1rem);
+                    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
-                &:hover {
-                    color: #0092CA;
-                    transform: translateY(-3px);
-                    font-weight: bold;
+                    &:hover {
+                        color: #0092CA;
+                        transform: translateY(-3px);
+                        font-weight: bold;
+                    }
                 }
             }
         }
-
     }
     .hamburger-icon {
         display: none;
@@ -57,7 +59,11 @@
         background: #393E46;
     }
 }
-
+@media screen and (max-width: 1480px) {
+    .main-navbar {
+        padding-left: 40px;
+    }
+}
 @media screen and (max-width: 768px) {
     .main-navbar {
         width: 100%;
