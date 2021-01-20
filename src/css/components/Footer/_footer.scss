@@ -84,6 +84,14 @@ footer {
     }
 }
 
+@media screen and (max-width: 1480px) {
+    footer {
+        .container {
+            padding: 0 40px;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     footer {
         height: auto;

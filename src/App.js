@@ -17,10 +17,10 @@ function App() {
       <About data={sectionData[0]}/>
       <div className='filler' />
       <Projects data={sectionData[1]}/>
-      {/*<div className='filler' />
+      <div className='filler' />
       <Skills data={sectionData[2]}/>
       <Contact data={sectionData[3]}/>
-  <Footer />*/}
+      <Footer />
     </>
   );
 }

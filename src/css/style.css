@@ -326,7 +326,7 @@ header .social-icons .icon:hover {
 
 .hero .video-container .up {
   bottom: -2px;
-  right: -2px;
+  right: 0;
   left: 0;
 }
 
@@ -339,8 +339,8 @@ header .social-icons .icon:hover {
   z-index: 3;
   padding-left: calc((100vw - 1400px) /2);
   background: transparent;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero .hero-container h1 {
@@ -439,12 +439,12 @@ header .social-icons .icon:hover {
 
 .about .about-container .up {
   top: -2px;
-  left: 0;
+  left: -1%;
 }
 
 .about .about-container .bottom {
   bottom: -2px;
-  left: 0;
+  left: -1%;
 }
 
 .about .about-container .about-content {
@@ -612,12 +612,12 @@ header .social-icons .icon:hover {
 
 .projects .container .up {
   top: -2px;
-  right: 0;
+  right: -1%;
 }
 
 .projects .container .bottom {
   bottom: -2px;
-  right: 0;
+  right: -1%;
 }
 
 .projects .container .project-content {
@@ -781,7 +781,7 @@ header .social-icons .icon:hover {
   color: #eee;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1480px) {
   .fullbar {
     width: 275px;
     height: 30px;
@@ -795,7 +795,7 @@ header .social-icons .icon:hover {
   height: 100vh;
 }
 
-.skills .skills-container {
+.skills .container {
   widtH: 100%;
   height: 100%;
   position: relative;
@@ -809,12 +809,14 @@ header .social-icons .icon:hover {
   padding: calc((100vw - 1400px) /2);
 }
 
-.skills .skills-container .vector {
-  top: 0;
+.skills .container .vector {
+  width: 100%;
+  top: -2px;
   left: 0;
+  right: 0;
 }
 
-.skills .skills-container .skills-content {
+.skills .container .skills-content {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -824,19 +826,25 @@ header .social-icons .icon:hover {
   padding: calc((100vh - 600px)) 0 calc((100vh - 600px) /2) 0;
 }
 
-.skills .skills-container .skills-content .rightbar {
+.skills .container .skills-content .rightbar {
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+@media screen and (max-width: 1480px) {
+  .skills .container {
+    padding: 0 40px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .skills {
     height: auto;
   }
-  .skills .skills-container {
+  .skills .container {
     padding: 0 25px;
   }
-  .skills .skills-container .skills-content {
+  .skills .container .skills-content {
     height: auto;
     padding: 100px 0;
     -ms-grid-columns: 1fr;
@@ -853,6 +861,7 @@ header .social-icons .icon:hover {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  max-width: 450px;
   width: 85%;
   min-height: 500px;
   -webkit-filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
@@ -998,33 +1007,34 @@ header .social-icons .icon:hover {
 }
 
 .contact .vector {
+  width: 100%;
   bottom: -2px;
   left: 0;
+  right: 0;
 }
 
-.contact .contact-content {
+.contact .container {
   display: -ms-grid;
   display: grid;
   width: 100%;
   padding: calc((100vh - 600px) /2) calc((100vw - 1400px) /2);
   -ms-grid-columns: 450px 1fr;
       grid-template-columns: 450px 1fr;
-  grid-column-gap: 50px;
 }
 
-.contact .contact-content .rightbar .description {
+.contact .container .rightbar .description {
   color: #474646;
 }
 
-.contact .contact-content .rightbar .text {
+.contact .container .rightbar .text {
   color: #212121;
 }
 
-.contact .contact-content .rightbar ul {
+.contact .container .rightbar ul {
   list-style: none;
 }
 
-.contact .contact-content .rightbar ul li {
+.contact .container .rightbar ul li {
   font-style: normal;
   font-weight: 600;
   font-size: clamp(0.8rem, 5vw, 1.3rem);
@@ -1039,14 +1049,22 @@ header .social-icons .icon:hover {
   margin-bottom: 25px;
 }
 
-.contact .contact-content .rightbar ul li .icon {
+.contact .container .rightbar ul li .icon {
   font-size: clamp(1.3rem, 5vw, 2rem);
   margin-right: 10px;
   color: #212121;
 }
 
+@media screen and (max-width: 1480px) {
+  .contact .container {
+    padding: calc((100vh - 600px) /2) 40px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .contact .contact-content {
+  .contact .container {
     padding: 100px 25px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1054,11 +1072,11 @@ header .social-icons .icon:hover {
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 'text' 'card';
   }
-  .contact .contact-content .leftbar {
+  .contact .container .leftbar {
     -ms-grid-column-align: center;
         justify-self: center;
   }
-  .contact .contact-content .rightbar {
+  .contact .container .rightbar {
     height: auto;
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -1215,6 +1233,12 @@ footer .container .copyright::before {
   background: #0092CA;
 }
 
+@media screen and (max-width: 1480px) {
+  footer .container {
+    padding: 0 40px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   footer {
     height: auto;
@@ -1282,7 +1306,7 @@ body {
 
 .vector {
   position: absolute;
-  width: 100%;
+  width: 101%;
 }
 
 .filler {

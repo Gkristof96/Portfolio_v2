@@ -7,7 +7,7 @@ const Contact = ({data}) => {
     return (
         <>
             <section className='contact section' id='contact'>
-                    <div className='contact-content'>
+                    <div className='container'>
                         <div className='leftbar'>
                             <ContactCard />
                         </div>
