@@ -5,32 +5,8 @@ import ContactCard from './ContactCard'
 import SectionText from '../SectionText'
 import ContactInfo from './ContactInfo'
 import { contactData } from '../../data/contact'
+import { containerVariants, cardVariants } from '../../animations/animation'
 
-const container = {
-    hidden: { opacity: 1},
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 1.25,
-        staggerChildren: 0.3,
-        duration: 1
-      }
-    }
-  };
-  
-  
-
-const cardVariants = {
-    hidden: { x: -50, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        delay: 0.75
-      }
-    }
-}
 const Contact = ({data}) => {
     const controls = useAnimation();
     const { ref, inView } = useInView();
@@ -54,7 +30,7 @@ const Contact = ({data}) => {
                         <div className='rightbar'>
                             <SectionText data={data} controls={controls}/>
                             <motion.ul
-                                variants={container}
+                                variants={containerVariants}
                                 initial="hidden"
                                 animate={controls}
                             >

@@ -3,20 +3,7 @@ import Navbar from './Navbar'
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
 import SideMenu from './SideMenu'
 import {motion} from 'framer-motion'
-
-const iconAnimation = {
-    hidden: {
-        opacity: 0,
-        y: '-100px'
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            delay: 0.65
-        }
-    }
-}
+import { iconVariants } from '../../animations/animation'
 
 const Header = () => {
     const [isMenuOpen,setMenuOpen] = useState(false)
@@ -41,7 +28,7 @@ const Header = () => {
             <header className={`${(isMenuOpen || scroll) && 'scroll'}`}>
                 <Navbar handleOpen={handleOpen} isMenuOpen={isMenuOpen}/>
                 <motion.div className='social-icons'
-                    variants={iconAnimation}
+                    variants={iconVariants}
                     initial='hidden'
                     animate='visible'
                 >

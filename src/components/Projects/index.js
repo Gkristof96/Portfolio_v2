@@ -5,29 +5,7 @@ import { FaCaretLeft, FaCaretRight } from 'react-icons/fa'
 import ProjectCard from './ProjectCard'
 import SectionText from '../SectionText'
 import { projectData } from '../../data/projects';
-
-const cardVariants = {
-    hidden: { x: -50, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        delay: 0.75
-      }
-    }
-}
-const pagerVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        delay: 1
-      }
-    }
-}
+import { cardVariants, pagerVariants } from '../../animations/animation'
 
 const Projects = ({data}) => {
     const controls = useAnimation();

@@ -2,17 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import SectionText from '../SectionText'
-
-const imageVariants = {
-    hidden: { scale: 0 },
-    visible: {
-      scale: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-}
-
+import { imageVariants } from '../../animations/animation'
 const About = ({data}) => {
     const controls = useAnimation();
     const { ref, inView } = useInView();

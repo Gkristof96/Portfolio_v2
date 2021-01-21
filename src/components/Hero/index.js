@@ -1,61 +1,8 @@
 import React from 'react'
 import Video from '../../videos/video.mp4'
 import { motion } from 'framer-motion'
+import { titleVariants, descVariants, parVariants, buttonVariants } from '../../animations/animation'
 
-
-const titleAniamtion ={
-    hidden: {
-        opacity: 0,
-        y: '100px',
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            delay: 1
-        }
-    }
-}
-
-const descAniamtion ={
-    hidden: {
-        opacity: 0,
-        y: '100px'
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            delay: 1.1
-        }
-    }
-}
-const parAniamtion ={
-    hidden: {
-        opacity: 0,
-        y: '100px'
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            delay: 1.2
-        }
-    }
-}
-const buttonAniamtion ={
-    hidden: {
-        opacity: 0,
-        y: '100px'
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            delay: 1.3
-        }
-    }
-}
 const Hero = () => {
     return (
         <>
@@ -66,24 +13,24 @@ const Hero = () => {
                 </div>
                 <div className='hero-container'>
                     <motion.h1
-                        variants={titleAniamtion}
+                        variants={titleVariants}
                         initial='hidden'
                         animate='visible'
                     >Üdvözöllek az oldalamon!</motion.h1>
                     <motion.h2
-                        variants={descAniamtion}
+                        variants={descVariants}
                         initial='hidden'
                         animate='visible'
                     >Az én nevem <span>Kristóf</span></motion.h2>
                     <motion.p
-                        variants={parAniamtion}
+                        variants={parVariants}
                         initial='hidden'
                         animate='visible'
                     >
                         Ezen az oldalon megismerhetsz hogy ki is vagyok, valamint láthatod néhány korábbi projektem.
                     </motion.p>
                     <motion.button
-                        variants={buttonAniamtion}
+                        variants={buttonVariants}
                         initial='hidden'
                         animate='visible'
                     >Bővebben</motion.button>

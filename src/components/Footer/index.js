@@ -2,20 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { AiOutlineFacebook, AiOutlineTwitter, AiOutlineInstagram } from 'react-icons/ai'
-
-const footerVariants = {
-    hidden: {
-        y: -25,
-        opacity: 0,
-    },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            duration: 1
-        }
-    }
-}
+import { footerVariants } from '../../animations/animation'
 
 const Footer = () => {
     const controls = useAnimation();

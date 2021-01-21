@@ -19,6 +19,7 @@ function App() {
       <Projects data={sectionData[1]}/>
       <div className='filler' />
       <Skills data={sectionData[2]}/>
+      <div className='filler' />
       <Contact data={sectionData[3]}/>
       <Footer />
     </>

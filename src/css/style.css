@@ -582,6 +582,13 @@ header .social-icons .icon:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .project-card {
+    width: 420px;
+    margin-right: 10px;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .project-card {
     width: 290px;
