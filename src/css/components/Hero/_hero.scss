@@ -1,5 +1,5 @@
 .hero {
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     background: white;
     position: relative;
@@ -36,7 +36,7 @@
         z-index: 3;
         padding-left: calc((100vw - 1400px) /2);
         background: transparent;
-        padding-top: 200px;
+        padding-top: 250px;
         padding-bottom: 200px;
         h1 {
             font-style: normal;
@@ -102,7 +102,7 @@
             width: 100%;
         }
         .hero-container {
-            padding: 100px 25px;
+            padding: 150px 25px;
             p {
                 padding-right: 0;
             }

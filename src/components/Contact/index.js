@@ -1,23 +1,65 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import ContactCard from './ContactCard'
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa'
 import SectionText from '../SectionText'
+import ContactInfo from './ContactInfo'
+import { contactData } from '../../data/contact'
 
+const container = {
+    hidden: { opacity: 1},
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 1.25,
+        staggerChildren: 0.3,
+        duration: 1
+      }
+    }
+  };
+  
+  
+
+const cardVariants = {
+    hidden: { x: -50, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: 0.75
+      }
+    }
+}
 const Contact = ({data}) => {
+    const controls = useAnimation();
+    const { ref, inView } = useInView();
+
+    useEffect(() => {
+        if (inView) {
+          controls.start('visible');
+        }
+        if (!inView) {
+          controls.start('hidden');
+        }
+    }, [controls, inView]);
+
     return (
         <>
-            <section className='contact section' id='contact'>
+            <section ref={ref} className='contact section' id='contact'>
                     <div className='container'>
-                        <div className='leftbar'>
+                        <motion.div initial="hidden" animate={controls} variants={cardVariants} className='leftbar'>
                             <ContactCard />
-                        </div>
+                        </motion.div>
                         <div className='rightbar'>
-                            <SectionText data={data}/>
-                            <ul>
-                                <li><FaEnvelope className='icon' />kristef.g@gmail.com</li>
-                                <li><FaPhoneAlt className='icon' />+36 30 123 4567</li>
-                                <li><FaMapMarkerAlt className='icon' />Zalaegerszeg, 8900</li>
-                            </ul>
+                            <SectionText data={data} controls={controls}/>
+                            <motion.ul
+                                variants={container}
+                                initial="hidden"
+                                animate={controls}
+                            >
+                                {contactData.map((data,i) => ( <ContactInfo key={i} info={data.info} icon={data.icon} />))}
+                            </motion.ul>
                         </div>
                     </div>
                 <img className='vector' src='images/vectors/vector_7.svg' alt='vector' />

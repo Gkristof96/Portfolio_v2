@@ -13,7 +13,7 @@ function App() {
     <>
       <Header />
       <Hero />
-      <div className='filler' />
+      <div className='filler first' />
       <About data={sectionData[0]}/>
       <div className='filler' />
       <Projects data={sectionData[1]}/>

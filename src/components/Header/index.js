@@ -13,7 +13,7 @@ const iconAnimation = {
         opacity: 1,
         y: 0,
         transition: {
-            delay: 1
+            delay: 0.65
         }
     }
 }

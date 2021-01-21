@@ -94,6 +94,12 @@
         .container {
             width: 100%;
             padding-left: 0;
+            .up {
+                right: 0;
+            }
+            .bottom {
+                right: 0;
+            }
             .project-content {
                 height: auto;
                 padding: 100px 0;

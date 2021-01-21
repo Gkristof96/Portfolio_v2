@@ -69,7 +69,13 @@
         }
         .about-container {
             width: 100%;
-            padding: 100px 25px; 
+            padding: 100px 25px;
+            .up {
+                left: 0;
+            }
+            .bottom {
+                left: 0;
+            }
             .about-content {
                 height: auto;
                 grid-template-columns: 1fr;

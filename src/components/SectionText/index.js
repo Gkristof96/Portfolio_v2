@@ -1,11 +1,46 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
-const SectionText = ({data}) => {
+const titleVariants = {
+    hidden: { y: 50, opacity: 0},
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: 0.25
+      }
+    }
+}
+const descVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: 0.5
+      }
+    }
+}
+const textVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: 0.75
+      }
+    }
+}
+
+const SectionText = ({data, controls}) => {
     return (
         <>
-            <h1 className='title'>{data.title}</h1>
-            <h2 className='description'>{data.description}</h2>
-            <p className='text'>{data.text}</p>
+            <motion.h1 initial="hidden" animate={controls} variants={titleVariants} className='title'>{data.title}</motion.h1>
+            <motion.h2 initial="hidden" animate={controls} variants={descVariants} className='description'>{data.description}</motion.h2>
+            <motion.p  initial="hidden" animate={controls} variants={textVariants} className='text'>{data.text}</motion.p>
         </>
     )
 }
