@@ -3,6 +3,7 @@ import HamburgerIcon from './HamburgerIcon'
 import { motion } from 'framer-motion'
 import { navData } from '../../../data/nav'
 import { navbarVariants } from '../../../animations/animation'
+import { Link } from 'react-scroll'
 
 const Navbar = ({isMenuOpen, handleOpen}) => {
     return (
@@ -15,7 +16,7 @@ const Navbar = ({isMenuOpen, handleOpen}) => {
                 <a className='logo' href='/'>Kristof's Portfolio</a>
                 <nav>
                     <ul>
-                        {navData.map((data,i) => ( <li><a href={data.path}>{data.title}</a></li>))}
+                        {navData.map((data,i) => ( <li key={i}><Link smooth={true} duration={500} spy={true} exact="true" to={data.path}>{data.title}</Link></li>))}
                     </ul>
                 </nav>
                 <div className='hamburger-icon'>

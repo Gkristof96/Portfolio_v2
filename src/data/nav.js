@@ -1,18 +1,18 @@
 export const navData = [
     {
         title: 'Rólam',
-        path: '#about'
+        path: 'about'
     },
     {
         title: 'Projektek',
-        path: '#projects'
+        path: 'projects'
     },
     {
         title: 'Készségek',
-        path: '#skills'
+        path: 'skills'
     },
     {
         title: 'Kapcsolat',
-        path: '#contact'
+        path: 'contact'
     }
 ]
