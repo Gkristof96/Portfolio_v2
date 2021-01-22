@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import validate from '../../../hooks/validateMessage'
 import useInput from '../../../hooks/useInput'
 import { FaExclamationTriangle } from 'react-icons/fa'
-import axios from 'axios'
+import emailjs from 'emailjs-com'
 
-const ContactCard = () => {
+const ContactCard = ({handleOpen}) => {
     // állapot az inputok tárolására
     const [values, setValues] = useState({
         email: '',
@@ -13,20 +13,8 @@ const ContactCard = () => {
     });
     // Adatok küldése a szervernek
     const saveData = () => {
-        axios
-        .post("url", {
-            message: {
-            name: values.name,
-            email: values.email,
-            message: values.message,
-            },
-        })
-        .then((response) => {
-            console.log("elküldve", response);
-        })
-        .catch((error) => {
-            console.log(error);
-        });
+        console.log(values)
+          handleOpen();
     };
     // saját horog hívása
     const { handleChange, handleSubmit, errors } = useInput(

@@ -13,7 +13,7 @@ const Navbar = ({isMenuOpen, handleOpen}) => {
                 initial='hidden'
                 animate='visible'
             >
-                <a className='logo' href='/'>Kristof's Portfolio</a>
+                <Link className='logo' smooth={true} duration={500} spy={true} exact="true" to='hero'>Kristof's Portfolio</Link>
                 <nav>
                     <ul>
                         {navData.map((data,i) => ( <li key={i}><Link smooth={true} duration={500} spy={true} exact="true" to={data.path}>{data.title}</Link></li>))}

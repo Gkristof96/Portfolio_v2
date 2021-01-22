@@ -23,11 +23,11 @@ const Projects = ({data}) => {
     const [current,setCurrent] = useState(0)
 
     const handleLeftClick = () => {
-        current === 0 ? setCurrent(-430 * (3 - 1)) : setCurrent(current + 430);
+        current === 0 ? setCurrent(-430 * (projectData.length - 1)) : setCurrent(current + 430);
       };
       // jobbra léptető függvény 680-al lép jobbra ha nem az utolsó elemnél vagyunk
     const handleRightClick = () => {
-        current === -430 * (3 - 1) ? setCurrent(0) : setCurrent(current - 430);
+        current === -430 * (projectData.length - 1) ? setCurrent(0) : setCurrent(current - 430);
     };
     return (
         <>

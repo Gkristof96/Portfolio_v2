@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ContactCard from './ContactCard'
@@ -6,8 +6,10 @@ import SectionText from '../SectionText'
 import ContactInfo from './ContactInfo'
 import { contactData } from '../../data/contact'
 import { containerVariants, cardVariants } from '../../animations/animation'
+import Modal from './Modal'
 
 const Contact = ({data}) => {
+    const [modalOpen,setModelOpen] = useState(true)
     const controls = useAnimation();
     const { ref, inView } = useInView();
 
@@ -19,13 +21,16 @@ const Contact = ({data}) => {
           controls.start('hidden');
         }
     }, [controls, inView]);
-
+    
+    const handleOpen = () => setModelOpen(!modalOpen)
     return (
         <>
+            <Modal modalOpen={modalOpen} handleOpen={handleOpen}/>
             <section ref={ref} className='contact section' id='contact'>
+                
                     <div className='container'>
                         <motion.div initial="hidden" animate={controls} variants={cardVariants} className='leftbar'>
-                            <ContactCard />
+                            <ContactCard handleOpen={handleOpen}/>
                         </motion.div>
                         <div className='rightbar'>
                             <SectionText data={data} controls={controls}/>

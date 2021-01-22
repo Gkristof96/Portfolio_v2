@@ -106,6 +106,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
   color: #EEEEEE;
 }
 
@@ -133,10 +134,12 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 10px;
 }
 
 .main-navbar nav ul li a {
+  cursor: pointer;
+  padding: 10px 20px;
+  position: relative;
   text-decoration: none;
   color: #EEEEEE;
   font-size: clamp(0.6rem, 1.8vw, 1rem);
@@ -151,6 +154,18 @@
   font-weight: bold;
 }
 
+.main-navbar nav ul li a.active::after {
+  content: '';
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 3px;
+  background: #0092CA;
+}
+
 .main-navbar .hamburger-icon {
   display: none;
 }
@@ -162,6 +177,9 @@
 @media screen and (max-width: 1480px) {
   .main-navbar {
     padding-left: 40px;
+  }
+  .main-navbar nav ul li a {
+    padding: 10px;
   }
 }
 
@@ -233,7 +251,7 @@
 header {
   width: 100%;
   height: 80px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
@@ -283,18 +301,27 @@ header .social-icons .icon:hover {
           transform: translateY(-3px);
 }
 
+header.scroll {
+  position: fixed;
+  background: #393E46;
+  border-bottom: 3px solid #0092CA;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+header.scroll .social-icons .icon {
+  color: #eee;
+}
+
+header.scroll .social-icons .icon:hover {
+  color: #0092CA;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
 @media screen and (max-width: 768px) {
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
   header .social-icons {
     display: none;
-  }
-  header.scroll {
-    position: fixed;
-    background: #393E46;
   }
 }
 
@@ -378,7 +405,7 @@ header .social-icons .icon:hover {
   margin-bottom: 25px;
 }
 
-.hero .hero-container button {
+.hero .hero-container .btn {
   height: 50px;
   width: 200px;
   background: #0092CA;
@@ -541,6 +568,16 @@ header .social-icons .icon:hover {
   background: #C4C4C4;
   border-radius: 10px;
   padding: 25px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
 }
@@ -560,18 +597,17 @@ header .social-icons .icon:hover {
   color: #757575;
 }
 
-.project-card button {
-  border: none;
-  outline: none;
-  width: 100%;
-  background: #0092CA;
-  border-radius: 5px;
+.project-card a {
+  text-align: center;
+  padding: 15px 118px;
+  color: #eee;
+  font-size: clamp(0.8rem, 4vw, 1.3rem);
   font-style: normal;
   font-weight: normal;
-  font-size: clamp(0.8rem, 4vw, 1.3rem);
   line-height: 29px;
-  height: 50px;
-  color: #eee;
+  text-decoration: none;
+  background: #0092CA;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1480px) {
@@ -580,6 +616,9 @@ header .social-icons .icon:hover {
     height: auto;
     margin-right: 140px;
   }
+  .project-card a {
+    padding: 15px 53px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -587,12 +626,18 @@ header .social-icons .icon:hover {
     width: 420px;
     margin-right: 10px;
   }
+  .project-card a {
+    padding: 15px 118px;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .project-card {
     width: 290px;
     margin-right: 140px;
+  }
+  .project-card a {
+    padding: 15px 60px;
   }
 }
 
@@ -1020,6 +1065,73 @@ header .social-icons .icon:hover {
   }
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 25;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .message-container {
+  width: 400px;
+  height: 200px;
+  background: white;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.modal .message-container .content {
+  height: 100%;
+  border: 1px solid #0092CA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.modal .message-container .content .envelope {
+  font-size: 2rem;
+  color: #212121;
+}
+
+.modal .message-container .content h1 {
+  font-size: 1.5rem;
+  color: #212121;
+  margin-bottom: 15px;
+}
+
+.modal .message-container .content .icon {
+  cursor: pointer;
+  color: black;
+  font-size: 1rem;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
 .contact {
   min-height: 100vh;
   width: 100%;
@@ -1174,6 +1286,7 @@ footer .container .logo__brand {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
 footer .container .logo__brand h1 {
@@ -1204,6 +1317,7 @@ footer .container .logo ul li {
 }
 
 footer .container .logo ul li a {
+  cursor: pointer;
   color: #eee;
   text-decoration: none;
   text-transform: uppercase;
@@ -1211,7 +1325,13 @@ footer .container .logo ul li a {
   padding-top: 25px;
   font-style: normal;
   font-weight: 500;
-  font-size: clamp(0.5rem, 4vw, 1rem);
+  font-size: clamp(0.5rem, 3vw, 1rem);
+}
+
+footer .container .logo ul li a:hover {
+  color: #0092CA;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 footer .container .social-icons {
@@ -1221,8 +1341,15 @@ footer .container .social-icons {
 }
 
 footer .container .social-icons .icon {
+  margin-left: 15px;
   font-size: 2rem;
   color: #eee;
+}
+
+footer .container .social-icons .icon:hover {
+  color: #0092CA;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 footer .container .copyright {
@@ -1292,7 +1419,7 @@ footer .container .copyright::before {
         justify-self: center;
   }
   footer .container .logo ul li a {
-    padding-right: 15px;
+    padding: 0 10px;
   }
   footer .container .social-icons {
     -ms-grid-row: 2;

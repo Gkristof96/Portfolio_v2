@@ -4,7 +4,7 @@
 header {
     width: 100%;
     height: 80px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
@@ -34,19 +34,27 @@ header {
             }
         }
     }
+    &.scroll {
+        position: fixed;
+        background: #393E46;
+        border-bottom: 3px solid #0092CA;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+        .social-icons {
+            .icon {
+                color: #eee;
+                &:hover {
+                    color: #0092CA;
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
     header{
-        position: fixed;
-        top: 0;
-        left: 0;
         .social-icons {
             display: none;
-        }
-        &.scroll {
-            position: fixed;
-            background: #393E46;
         }
     }
 }

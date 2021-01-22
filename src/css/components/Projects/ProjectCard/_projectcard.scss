@@ -5,6 +5,9 @@
     background: #C4C4C4;
     border-radius: 10px;
     padding: 25px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
     img {
         border-radius: 5px 5px 0 0;
@@ -19,19 +22,17 @@
         margin-bottom: 25px;
         color: #757575;
     }
-    button {
-        border: none;
-        outline: none;
-        width: 100%;
-        background: #0092CA;
-        border-radius: 5px;
+    a {
+        text-align: center;
+        padding: 15px 118px;
+        color: #eee;
+        font-size: clamp(0.8rem,4vw,1.3rem);
         font-style: normal;
         font-weight: normal;
-        font-size: clamp(0.8rem,4vw,1.3rem);
         line-height: 29px;
-        height: 50px;
-
-        color: #eee;
+        text-decoration: none;
+        background: #0092CA;
+        border-radius: 5px;
     }
 }
 @media screen and (max-width: 1480px) {
@@ -39,12 +40,18 @@
         width: 290px;
         height: auto;
         margin-right: 140px;
+        a {
+            padding: 15px 53px;
+        }
     }
 }
 @media screen and (max-width: 768px) {
     .project-card {
         width: 420px;
         margin-right: 10px;
+        a {
+            padding: 15px 118px;
+        }
     }
 }
 
@@ -52,5 +59,8 @@
     .project-card {
         width: 290px;
         margin-right: 140px;
+        a {
+            padding: 15px 60px;
+        }
     }
 }

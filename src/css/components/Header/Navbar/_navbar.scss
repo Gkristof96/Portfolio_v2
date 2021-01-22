@@ -17,7 +17,7 @@
         line-height: 44px;
         display: flex;
         align-items: center;
-
+        cursor: pointer;
         color: #EEEEEE;
     }
     nav {
@@ -35,9 +35,12 @@
                 display: flex;
                 align-items: center;
                 text-align: center;
-                padding: 10px;
+                
 
                 a {
+                    cursor: pointer;
+                    padding:  10px 20px;
+                    position: relative;
                     text-decoration: none;
                     color: #EEEEEE;
                     font-size: clamp(0.6rem,1.8vw,1rem);
@@ -47,6 +50,18 @@
                         color: #0092CA;
                         transform: translateY(-3px);
                         font-weight: bold;
+                    }
+                    &.active {
+                        &::after {
+                            content: '';
+                            width: 90%;
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 3px;
+                            background: #0092CA;
+                        }
                     }
                 }
             }
@@ -62,6 +77,9 @@
 @media screen and (max-width: 1480px) {
     .main-navbar {
         padding-left: 40px;
+        nav ul li a {
+            padding: 10px;
+        }
     }
 }
 @media screen and (max-width: 768px) {

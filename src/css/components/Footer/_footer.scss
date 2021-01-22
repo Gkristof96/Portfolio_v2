@@ -13,6 +13,7 @@ footer {
                 display: flex;
                 align-items: center;
                 text-decoration: none;
+                cursor: pointer;
                 h1 {
                     font-style: normal;
                     font-weight: bold;
@@ -34,6 +35,7 @@ footer {
 
                     color: #EEEEEE;
                     a {
+                        cursor: pointer;
                         color: #eee;
                         text-decoration: none;
                         text-transform: uppercase;
@@ -41,7 +43,11 @@ footer {
                         padding-top: 25px;
                         font-style: normal;
                         font-weight: 500;
-                        font-size: clamp(0.5rem, 4vw, 1rem);
+                        font-size: clamp(0.5rem, 3vw, 1rem);
+                        &:hover {
+                            color: #0092CA;
+                            transform: translateY(-3px);
+                        }
                     }
                 }
             }
@@ -52,8 +58,13 @@ footer {
             justify-self: flex-end;
 
             .icon {
+                margin-left: 15px;
                 font-size: 2rem;
                 color: #eee;
+                &:hover {
+                    color: #0092CA;
+                    transform: translateY(-3px);
+                }
             }
         }
 
@@ -110,7 +121,7 @@ footer {
                 align-self: center;
                 justify-self: center;
                 ul li a {
-                    padding-right: 15px;
+                    padding: 0 10px;
                 }
             }
 

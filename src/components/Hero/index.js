@@ -2,11 +2,12 @@ import React from 'react'
 import Video from '../../videos/video.mp4'
 import { motion } from 'framer-motion'
 import { titleVariants, descVariants, parVariants, buttonVariants } from '../../animations/animation'
+import { Link } from 'react-scroll'
 
 const Hero = () => {
     return (
         <>
-            <section className='hero section'>
+            <section className='hero section' id='hero'>
                 <div className='video-container'>
                     <video className='video' autoPlay loop muted src={Video} type='video/mp4'  />
                     <img className='vector up' src='images/vectors/vector_1.svg' alt='vector' />
@@ -29,11 +30,6 @@ const Hero = () => {
                     >
                         Ezen az oldalon megismerhetsz hogy ki is vagyok, valamint láthatod néhány korábbi projektem.
                     </motion.p>
-                    <motion.button
-                        variants={buttonVariants}
-                        initial='hidden'
-                        animate='visible'
-                    >Bővebben</motion.button>
                 </div>
             </section>
         </>
