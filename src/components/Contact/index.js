@@ -9,7 +9,7 @@ import { containerVariants, cardVariants } from '../../animations/animation'
 import Modal from './Modal'
 
 const Contact = ({data}) => {
-    const [modalOpen,setModelOpen] = useState(true)
+    const [modalOpen,setModelOpen] = useState(false)
     const controls = useAnimation();
     const { ref, inView } = useInView();
 

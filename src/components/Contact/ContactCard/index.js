@@ -51,7 +51,7 @@ const ContactCard = ({handleOpen}) => {
                     }
                     <div className='input-group'>
                         <label>Üzenet</label>
-                        <textarea name='message' value={values.message} onChange={handleChange}/>
+                        <textarea name='message' value={values.message} onChange={handleChange} data-gramm_editor="false"/>
                     </div>
                     {errors.message && 
                         <p className='error-message'>
