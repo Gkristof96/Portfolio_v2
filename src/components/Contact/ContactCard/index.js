@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import validate from '../../../hooks/validateMessage'
 import useInput from '../../../hooks/useInput'
 import { FaExclamationTriangle } from 'react-icons/fa'
-import emailjs from 'emailjs-com'
 
 const ContactCard = ({handleOpen}) => {
     // állapot az inputok tárolására

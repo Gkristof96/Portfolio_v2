@@ -32,7 +32,7 @@ const Footer = () => {
                     </div>
                     <div className='social-icons'>
                         <a href='https://www.facebook.com/kristof.gerencser/'><AiOutlineFacebook className='icon'/></a>
-                        <a href='#'><AiOutlineTwitter className='icon'/></a>
+                        <AiOutlineTwitter className='icon'/>
                         <a href='https://www.instagram.com/ger_kristof/'><AiOutlineInstagram className='icon'/></a> 
                     </div>
                     <h1 className='copyright'>Copyright © Gerencsér Kristóf</h1>
