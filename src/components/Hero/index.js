@@ -1,8 +1,7 @@
 import React from 'react'
 import Video from '../../videos/video.mp4'
 import { motion } from 'framer-motion'
-import { titleVariants, descVariants, parVariants, buttonVariants } from '../../animations/animation'
-import { Link } from 'react-scroll'
+import { titleVariants, descVariants, parVariants} from '../../animations/animation'
 
 const Hero = () => {
     return (
