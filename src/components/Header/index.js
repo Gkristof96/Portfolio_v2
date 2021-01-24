@@ -33,7 +33,7 @@ const Header = () => {
                     animate='visible'
                 >
                     <a href='https://www.linkedin.com/in/krist%C3%B3f-gerencs%C3%A9r-a91a27203/'><AiFillLinkedin className='icon'/></a>
-                    <a href='#'><AiFillGithub className='icon'/></a>
+                    <AiFillGithub className='icon'/>
                 </motion.div>
             </header>
             <SideMenu handleOpen={handleOpen} isMenuOpen={isMenuOpen}/>
