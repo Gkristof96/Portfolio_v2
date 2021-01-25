@@ -1027,6 +1027,7 @@ header.scroll .social-icons .icon:hover {
 }
 
 .contact-card form button {
+  cursor: pointer;
   width: 200px;
   height: 50px;
   border: none;

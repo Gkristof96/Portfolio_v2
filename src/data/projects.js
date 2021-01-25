@@ -26,7 +26,7 @@ export const projectData = [
     {
       name: 'Old Portfolio',
       image: 'images/projects/project_4.png',
-      description: 'Ennek a portfolói oldalnak a korábbi verziója, reszponzív megjelenítés, és egyszerűbb design jellemzi.',
+      description: 'Ennek a portfolió oldalnak a korábbi verziója, reszponzív megjelenítés, és egyszerűbb design jellemzi.',
       path: 'https://kristof-portfolio.netlify.app'
     },
 ];

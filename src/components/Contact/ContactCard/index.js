@@ -1,63 +1,36 @@
-import React, { useState } from 'react'
-import validate from '../../../hooks/validateMessage'
-import useInput from '../../../hooks/useInput'
-import { FaExclamationTriangle } from 'react-icons/fa'
+import React from 'react'
+import emailjs from 'emailjs-com'
 
 const ContactCard = ({handleOpen}) => {
-    // állapot az inputok tárolására
-    const [values, setValues] = useState({
-        email: '',
-        name: '',
-        message: ''
-    });
-    // Adatok küldése a szervernek
-    const saveData = () => {
-        console.log(values)
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('gmail', 'template_h95q1ua', e.target, 'user_XKwWTJXKqLvBZMOufAXCz')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset();
           handleOpen();
-    };
-    // saját horog hívása
-    const { handleChange, handleSubmit, errors } = useInput(
-        validate,
-        values,
-        setValues,
-        saveData
-    );
+    }
     return (
         <>
             <div className='contact-card'>
                 <h1>Kérdésed van?</h1>
                 <h2>Töltsd ki az űrlapot és válaszolok!</h2>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={sendEmail}>
                     <div className='input-group'>
                         <label>Név</label>
-                        <input type="text" name='name' placeholder='Sebastion Montgomeri' value={values.name} onChange={handleChange}/>
+                        <input type="text" name='name' placeholder='Sebastion Montgomeri' required/>
                     </div>
-                    {errors.name && 
-                        <p className='error-message'>
-                        <FaExclamationTriangle/>
-                        {errors.name}
-                        </p>
-                    }
                     <div className='input-group'>
                         <label>Email</label>
-                        <input type="email" name='email' placeholder='sebastion@mail.com' value={values.email} onChange={handleChange}/>
+                        <input type="email" name='email' placeholder='sebastion@mail.com' required/>
                     </div>
-                    {errors.email && 
-                        <p className='error-message'>
-                        <FaExclamationTriangle/>
-                        {errors.email}
-                        </p>
-                    }
                     <div className='input-group'>
                         <label>Üzenet</label>
-                        <textarea name='message' value={values.message} onChange={handleChange} data-gramm_editor="false"/>
+                        <textarea name='message' data-gramm_editor="false" required/>
                     </div>
-                    {errors.message && 
-                        <p className='error-message'>
-                        <FaExclamationTriangle/>
-                        {errors.message}
-                        </p>
-                    }
                     <button type='submit'>Küldés</button>
                 </form>
             </div>
