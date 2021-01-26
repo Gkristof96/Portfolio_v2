@@ -2,24 +2,27 @@
 
 $colors: (
     primary: #0092CA,
-    light-gray: #757575,
+    light: #ffffff,
+    light-text: #eeeeee,
+    light-gray: #C4C4C4,
     dark-gray: #393E46,
+    dark-blue: #22313F,
     dark: #212121,
 );
-
-@import './components/Header/header';
-@import './components/Hero/hero';
-@import './components/About/about';
-@import './components/Projects/projects';
-@import './components/Skills/skills';
-@import './components/Contact/contact';
-@import './components/SectionText/sectiontext';
-@import './components/Footer/footer';
 
 // Functions
 @function color($color-name) {
     @return map-get($colors, $color-name);
 }
+// Section css files
+@import './components/Header/header';
+@import './components/Hero/hero';
+@import './components/About/about';
+@import './components/Contact/contact';
+@import './components/Footer/footer';
+@import './components/Projects/projects';
+@import './components/SectionText/sectiontext';
+@import './components/Skills/skills';
 
 * {
     margin: 0;
@@ -30,7 +33,6 @@ $colors: (
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: white;
 }
 
 
@@ -40,14 +42,14 @@ body {
 
 
 .vector {
-    position: absolute;
     width: 101%;
+    position: absolute;
 }
 
 .filler {
     width: 100%;
     height: 50px;
-    background: white;
+    background: color(light);
 }
 
 @media screen and (max-width: 768px) {

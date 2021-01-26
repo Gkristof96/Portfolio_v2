@@ -3,12 +3,12 @@
     width: 500px;
     height: 40px;
     border-radius: 5px;
-    background: #c4c4c4;
+    background: color(light-gray);
     position: relative;
     overflow: hidden;
     .valuebar {
         height: 40px;
-        background: #0092ca;
+        background: color(primary);
         position: relative;
         border-radius: 5px 0 0 5px;
         .title {
@@ -17,7 +17,7 @@
             transform: translateY(-50%);
             left: 10px;
             font-size: 18px;
-            color: #eee;
+            color: color(light-text);
         }
         .percent {
             position: absolute;
@@ -25,7 +25,7 @@
             transform: translateY(-50%);
             right: 10px;
             font-size: 18px;
-            color: #eee;
+            color: color(light-text);
         }
     }
 }

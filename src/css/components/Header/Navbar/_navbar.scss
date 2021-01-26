@@ -18,7 +18,7 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        color: #EEEEEE;
+        color: color(light-text);
     }
     nav {
         ul{
@@ -42,12 +42,12 @@
                     padding:  10px 20px;
                     position: relative;
                     text-decoration: none;
-                    color: #EEEEEE;
+                    color: color(light-text);
                     font-size: clamp(0.6rem,1.8vw,1rem);
                     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
                     &:hover {
-                        color: #0092CA;
+                        color: color(primary);
                         transform: translateY(-3px);
                         font-weight: bold;
                     }
@@ -60,7 +60,7 @@
                             left: 50%;
                             transform: translateX(-50%);
                             height: 3px;
-                            background: #0092CA;
+                            background: color(primary);
                         }
                     }
                 }
@@ -71,7 +71,7 @@
         display: none;
     }
     &.open {
-        background: #393E46;
+        background: color(dark-gray);
     }
 }
 @media screen and (max-width: 1480px) {

@@ -1,7 +1,7 @@
 .hero {
     height: 100vh;
     width: 100%;
-    background: white;
+    background: color(light);
     position: relative;
     z-index: 1;
     .video-container {
@@ -18,7 +18,7 @@
             height: 100%;
             -o-object-fit: cover;
             object-fit: cover;
-            background: #232a34;
+            background: color(dark-blue);
         }
         
         .up {
@@ -43,41 +43,38 @@
             font-weight: bold;
             font-size: clamp(2rem,8vw,4rem);
             line-height: 78px;
-
-            color: #EEEEEE;
+            color: color(light-text);
         }
         h2 {
+            margin-bottom: 10px;
             font-style: normal;
             font-weight: 600;
             font-size: clamp(1.5rem,4vw,2.6rem);
             line-height: 59px;
-
-            color: #EEEEEE;
-            margin-bottom: 10px;
+            color: color(light-text);
             span {
                 font-style: normal;
                 font-weight: bold;
                 font-size: clamp(1.5rem,4vw,2.6rem);
                 line-height: 59px;
-
-                color: #0092CA;
+                color: color(primary);
             }
         }
         p {
+            margin-bottom: 25px;
             font-style: normal;
             font-weight: 500;
             font-size: clamp(1rem,4vw,2rem);
             line-height: 44px;
             padding-right: 50px;
-            color: #EEEEEE;
-            margin-bottom: 25px;
+            color: color(light-text);
         }
 
         .btn {
             height: 50px;
             width: 200px;
-            background: #0092CA;
-            color: #eee;
+            background: color(primary);
+            color: color(light-text);
             font-style: normal;
             font-weight: 600;
             font-size: 18px;

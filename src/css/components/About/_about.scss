@@ -3,17 +3,17 @@
     display: flex;
     .empty-container {
         width: 10%;
-        background: white;
         height: 100%;
+        background: color(light);
     }
     .about-container {
         width: 90%;
         height: 100%;
-        background: #393E46;
+        padding-right: calc((100vw - 1400px) /2);
         position: relative;
         display: flex;
         align-items: center;
-        padding-right: calc((100vw - 1400px) /2);
+        background: color(dark-gray);
         .up {
             top: -2px;
             left: -1%;
@@ -25,18 +25,19 @@
         .about-content {
             height: 350px;
             width: 100%;
+
             display: grid;
             grid-template-columns: 300px 1fr;
             .leftbar {
                 position: relative;
                 img {
+                    width: 350px;
+                    height: 350px;
                     position: absolute;
                     top: 0;
                     left: -10%;
-                    width: 350px;
-                    height: 350px;
                     border-radius: 5px;
-                    filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
+                    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.25);
                 }
             }
             .rightbar {
@@ -85,10 +86,10 @@
                     display: flex;
                     justify-content: center;
                     img {
-                        position: static;
-                        transform: translateY(0);
                         width: 270px;
                         height: auto;
+                        position: static;
+                        transform: translateY(0);
                     }
                 }
                 .rightbar {

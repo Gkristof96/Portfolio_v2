@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.25);
     img {
         border-radius: 5px 5px 0 0;
         width: 100%;
@@ -20,18 +20,18 @@
         font-size: clamp(0.5rem,5vw,0.9rem);
         line-height: 22px;
         margin-bottom: 25px;
-        color: #757575;
+        color: color(dark-gray);
     }
     a {
         text-align: center;
         padding: 15px 118px;
-        color: #eee;
+        color: color(light-text);
         font-size: clamp(0.8rem,4vw,1.3rem);
         font-style: normal;
         font-weight: normal;
         line-height: 29px;
         text-decoration: none;
-        background: #0092CA;
+        background: color(primary);
         border-radius: 5px;
     }
 }

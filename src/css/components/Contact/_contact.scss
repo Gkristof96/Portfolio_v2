@@ -2,10 +2,10 @@
 @import './Modal/modal';
 
 .contact {
-    min-height: 100vh;
     width: 100%;
-    background: white;
+    min-height: 100vh;
     position: relative;
+    background: color(light);
     .vector {
         width: 100%;
         bottom: -2px;
@@ -13,34 +13,33 @@
         right: 0;
     }
     .container {
-            display: grid;
             width: 100%;
             padding: calc((100vh - 600px) /2) calc((100vw - 1400px) /2);
+            display: grid;
             grid-template-columns: 450px 1fr;
             .rightbar {
                 .description {
-                    color: #474646;
+                    color: color(dark-gray);
                 }
                 .text {
-                    color: #212121;
+                    color: color(dark);
                 }
                 ul {
                     list-style: none;
     
                     li {
+                        margin-bottom: 25px;
                         font-style: normal;
                         font-weight: 600;
                         font-size: clamp(0.8rem,5vw,1.3rem);
                         line-height: 29px;
                         display: flex;
                         align-items: center;
-    
-                        color: #212121;
-                        margin-bottom: 25px;
+                        color: color(dark);
                         .icon {
-                            font-size: clamp(1.3rem,5vw,2rem);
                             margin-right: 10px;
-                            color: #212121;
+                            font-size: clamp(1.3rem,5vw,2rem);
+                            color: color(dark);
                         }
                     }
                 };

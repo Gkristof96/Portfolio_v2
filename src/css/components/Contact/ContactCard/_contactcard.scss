@@ -1,33 +1,31 @@
 .contact-card {
-    align-self: center;
-    justify-self: center;
     max-width: 450px;
     width: 85%;
     min-height: 500px;
-    filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.25));
-    background: #0092CA;
+    padding: 15px 30px;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.25);
+    background: color(primary);
     border-radius: 5px;
     padding: 15px 30px;
-
     h1 {
+        margin-bottom: 10px;
         font-style: normal;
         font-weight: bold;
         font-size: 20px;
         line-height: 24px;
-
-        color: #EEEEEE;
-        margin-bottom: 10px;
+        color: color(light-text);
     }
     h2 {
+        margin-bottom: 10px;
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
         line-height: 17px;
         display: flex;
         align-items: center;
-
-        color: #393E46;
-        margin-bottom: 10px;
+        color: color(dark-gray);
     }
     form {
         width: 100%;
@@ -45,8 +43,7 @@
                 line-height: 22px;
                 display: flex;
                 align-items: center;
-
-                color: #000000;
+                color: color(dark);
             }
             input {
                 margin-top: 5px;
@@ -54,18 +51,19 @@
                 border: none;
                 outline: none;
                 padding-left: 5px;
-                background: #FFFFFF;
+                background: color(light-text);
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
                 border-radius: 5px;
             }
 
             textarea {
                 margin-top: 5px;
+                padding-top: 5px;
+                padding-left: 5px;
                 height: 150px;
                 border: none;
                 outline: none;
-                padding-left: 5px;
-                background: #FFFFFF;
+                background: color(light-text);
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
                 border-radius: 5px;
                 resize: none;
@@ -74,28 +72,19 @@
         }
 
         button {
-            cursor: pointer;
+            
             width: 200px;
             height: 50px;
             border: none;
             outline: none;
-
-            background: #393E46;
             border-radius: 10px;
             font-style: normal;
             font-weight: 600;
             font-size: clamp(0.8rem,4vw,1.3rem);
             line-height: 29px;
-
-            color: #FFFFFF;
-        }
-
-        .error-message {
-            color: #eee;
-            align-self: self-start;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
+            cursor: pointer;
+            color: color(light-text);
+            background: color(dark-gray);
         }
     }
 }

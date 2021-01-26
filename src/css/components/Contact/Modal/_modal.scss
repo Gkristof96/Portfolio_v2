@@ -1,44 +1,44 @@
 .modal {
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 25;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.75);
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(0,0,0,0.75);
     .message-container {
         width: 400px;
         height: 200px;
-        background: white;
         padding: 10px;
+        background: color(light);
         box-shadow: 0 0 15px 0 rgba(0,0,0,0.5);
         .content {
             height: 100%;
-            border: 1px solid #0092CA;;
+            position: relative;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            position: relative;
+            border: 1px solid color(primary);
             .envelope {
                 font-size: 2rem;
-                color: #212121;
+                color: color(dark);
             }
             h1 {
-                font-size: 1.5rem;
-                color: #212121;
                 margin-bottom: 15px;
+                font-size: 1.5rem;
+                color: color(dark);
             }
             .icon {
-                cursor: pointer;
-                color: black;
                 font-size: 1rem;
                 position: absolute;
                 top: 15px;
                 right: 15px;
+                cursor: pointer;
+                color: color(dark);
             }
         }
     }

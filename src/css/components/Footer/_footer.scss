@@ -1,6 +1,6 @@
 footer {
     height: 150px;
-    background: #22313F;
+    background:color(dark-blue);
     .container {
         padding: 0 calc((100vw - 1400px) /2);
         display: grid;
@@ -19,8 +19,7 @@ footer {
                     font-weight: bold;
                     font-size: clamp(1rem, 5vw, 2rem);
                     line-height: 44px;
-
-                    color: #eee;
+                    color: color(light-text);
                 }
             }
             ul {
@@ -32,20 +31,19 @@ footer {
                     display: flex;
                     align-items: center;
                     text-align: center;
-
-                    color: #EEEEEE;
+                    color: color(light-text);
                     a {
-                        cursor: pointer;
-                        color: #eee;
-                        text-decoration: none;
-                        text-transform: uppercase;
                         padding-right: 25px;
                         padding-top: 25px;
+                        text-decoration: none;
+                        text-transform: uppercase;
                         font-style: normal;
                         font-weight: 500;
                         font-size: clamp(0.5rem, 3vw, 1rem);
+                        cursor: pointer;
+                        color: color(light-text);
                         &:hover {
-                            color: #0092CA;
+                            color: color(primary);
                             transform: translateY(-3px);
                         }
                     }
@@ -60,9 +58,9 @@ footer {
             .icon {
                 margin-left: 15px;
                 font-size: 2rem;
-                color: #eee;
+                color: color(light-text);
                 &:hover {
-                    color: #0092CA;
+                    color: color(primary);
                     transform: translateY(-3px);
                 }
             }
@@ -78,10 +76,8 @@ footer {
             line-height: 17px;
             text-align: center;
             align-self: center;
-
-            color: #757575;
+            color: color(light-gray);
             position: relative;
-
             &::before {
                 content: '';
                 position: absolute;
@@ -89,7 +85,7 @@ footer {
                 left: 0;
                 width: 100%;
                 height: 1px;
-                background: #0092CA;
+                background: color(primary);
             }
         }
     }
