@@ -1,11 +1,11 @@
 export const navData = [
     {
-        title: 'Rólam',
-        path: 'about'
-    },
-    {
         title: 'Projektek',
         path: 'projects'
+    },
+    {
+        title: 'Rólam',
+        path: 'about'
     },
     {
         title: 'Készségek',
