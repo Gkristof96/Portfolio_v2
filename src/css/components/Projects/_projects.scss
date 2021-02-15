@@ -1,143 +1,146 @@
-@import './ProjectCard/projectcard';
+@import "./ProjectCard/projectcard";
+@import "./ProjectCard/techtag";
 
 .projects {
-    height: 100vh;
+  height: 100vh;
+  min-height: 900px;
+  display: flex;
+  .empty-container {
+    width: 10%;
+    height: 100%;
+    background: color(light);
+  }
+
+  .container {
+    width: 90%;
+    height: 100%;
+    background: color(dark-blue);
+    position: relative;
     display: flex;
-    .empty-container {
-        width: 10%;
-        height: 100%;
-        background: color(light);
+    align-items: center;
+    padding-right: calc((100vw - 1400px) / 2);
+    padding-left: clamp(40px, 100px, calc((100vw - 1400px) / 2));
+    .up {
+      top: -2px;
+      left: -1%;
     }
 
-    .container {
-        width: 90%;
+    .bottom {
+      bottom: -2px;
+      left: -1%;
+    }
+    .project-content {
+      height: 600px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      .leftbar {
+        width: 100%;
         height: 100%;
-        background: color(dark-blue);
-        position: relative;
+        overflow: hidden;
         display: flex;
-        align-items: center;
-        padding-left: calc((100vw - 1400px) /2);
-        .up {
-            top: -2px;
-            right: -1%;
-        }
+        align-items: flex-start;
 
-        .bottom {
-            bottom: -2px;
-            right: -1%;
+        .card-slider {
+          display: flex;
+          transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
-        .project-content {
-            height: 500px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 420px 1fr;
-            .leftbar {
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                display: flex;
-                align-items: flex-start;
-                
-                .card-slider {
-                    display: flex;
-                    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-                }
+      }
+      .rightbar {
+        padding-right: 100px;
+        margin-left: 50px;
+        .pager {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+          cursor: pointer;
+          .icon {
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            border: 3px solid color(primary);
+            font-size: 3rem;
+            color: color(primary);
+            background: color(dark-gray);
+            &:first-child {
+              margin-right: 25px;
             }
-            .rightbar {
-                padding-right: 100px;
-                margin-left: 50px;
-                .pager {
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    width: 100%;
-                    cursor: pointer;
-                    .icon {
-                        height: 100px;
-                        width: 100px;
-                        border-radius: 10px;
-                        border: 3px solid color(primary);
-                        font-size: 3rem;
-                        color: color(primary);
-                        background: color(dark-gray);
-                        &:first-child {
-                            margin-right: 25px;
-                        }
-                    }
-                }
-            }
+          }
         }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 1480px) {
-    .projects {
-        .container {
-            padding-left: 40px;
-            .project-content {
-                grid-template-columns: 290px 1fr;
-                .leftbar {
-                    align-items: flex-start;
-                    width: 290px;
-                }
-            }
+  .projects {
+    .container {
+      padding-left: 40px;
+      .project-content {
+        grid-template-columns: 290px 1fr;
+        .leftbar {
+          align-items: flex-start;
+          width: 290px;
         }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .projects {
-        height: auto;
-        .empty-container {
-            display: none;
-        }
-        .container {
-            width: 100%;
-            padding-left: 0;
-            .up {
-                right: 0;
-            }
-            .bottom {
-                right: 0;
-            }
-            .project-content {
-                height: auto;
-                padding: 100px 0;
-                grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr;
-                grid-row-gap: 25px;
-                grid-template-areas: 'text' 'cards';
-                .rightbar {
-                    margin-left: 0;
-                    padding: 0 25px;
-                    grid-area: text;
-                    .pager {
-                        .icon {
-                            width: 50%;
-                            height: 30px;
-                            font-size: 1.5rem;
-                            border: 1.5px solid color(primary);
-                        }
-                    }
-                }
-                .leftbar {
-                    width: 420px;
-                    justify-self: center;
-                }
-            }
-        }
+  .projects {
+    height: auto;
+    .empty-container {
+      display: none;
     }
+    .container {
+      width: 100%;
+      padding-left: 0;
+      .up {
+        right: 0;
+      }
+      .bottom {
+        right: 0;
+      }
+      .project-content {
+        height: auto;
+        padding: 100px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-row-gap: 25px;
+        grid-template-areas: "text" "cards";
+        .rightbar {
+          margin-left: 0;
+          padding: 0 25px;
+          grid-area: text;
+          .pager {
+            .icon {
+              width: 50%;
+              height: 30px;
+              font-size: 1.5rem;
+              border: 1.5px solid color(primary);
+            }
+          }
+        }
+        .leftbar {
+          width: 420px;
+          justify-self: center;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 450px) {
-    .projects {
-        .container {
-            .project-content {
-                .leftbar {
-                    width: 320px;
-                    padding: 0 15px;
-                }
-            }
+  .projects {
+    .container {
+      .project-content {
+        .leftbar {
+          width: 320px;
+          padding: 0 15px;
         }
+      }
     }
+  }
 }

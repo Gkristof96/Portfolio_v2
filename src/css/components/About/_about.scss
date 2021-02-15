@@ -1,101 +1,104 @@
 .about {
-    height: 100vh;
+  height: 100vh;
+  display: flex;
+  .empty-container {
+    width: 10%;
+    height: 100%;
+    background: color(light);
+  }
+  .about-container {
+    width: 90%;
+    height: 100%;
+    padding-left: calc((100vw - 1400px) / 2);
+    position: relative;
     display: flex;
-    .empty-container {
-        width: 10%;
-        height: 100%;
-        background: color(light);
+    align-items: center;
+    background: color(dark-gray);
+    .up {
+      top: -2px;
+      right: -1%;
     }
-    .about-container {
-        width: 90%;
-        height: 100%;
-        padding-right: calc((100vw - 1400px) /2);
-        position: relative;
-        display: flex;
-        align-items: center;
-        background: color(dark-gray);
-        .up {
-            top: -2px;
-            left: -1%;
-        }
-        .bottom {
-            bottom: -2px;
-            left: -1%;
-        }
-        .about-content {
-            height: 350px;
-            width: 100%;
+    .bottom {
+      bottom: -2px;
+      right: -1%;
+    }
+    .about-content {
+      height: 350px;
+      width: 100%;
 
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            .leftbar {
-                position: relative;
-                img {
-                    width: 350px;
-                    height: 350px;
-                    position: absolute;
-                    top: 0;
-                    left: -10%;
-                    border-radius: 5px;
-                    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.25);
-                }
-            }
-            .rightbar {
-                margin-left: 50px;
-            }
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      .rightbar {
+        position: relative;
+        img {
+          width: 350px;
+          height: 350px;
+          position: absolute;
+          top: 0;
+          right: -10%;
+          border-radius: 5px;
+          box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.25);
         }
+      }
+      .leftbar {
+        margin-right: 100px;
+      }
     }
+  }
 }
 @media screen and (max-width: 1480px) {
-    .about {
-        .about-container {
-            padding-right: 40px;
-            .about-content {
-                grid-template-columns: 200px 1fr;
-                .leftbar {
-                    img {
-                        width: 250px;
-                        height: auto;
-                    }
-                }
-            }
+  .about {
+    .about-container {
+      padding-left: 40px;
+      .about-content {
+        grid-template-columns: 1fr 200px;
+        .rightbar {
+          img {
+            width: 250px;
+            height: auto;
+          }
         }
+      }
     }
+  }
 }
 @media screen and (max-width: 768px) {
-    .about {
-        height: auto;
-        .empty-container {
-            display: none;
-        }
-        .about-container {
-            width: 100%;
-            padding: 100px 25px;
-            .up {
-                left: 0;
-            }
-            .bottom {
-                left: 0;
-            }
-            .about-content {
-                height: auto;
-                grid-template-columns: 1fr;
-                grid-template-rows: 270px 1fr;
-                grid-row-gap: 25px;
-                .leftbar {
-                    display: flex;
-                    justify-content: center;
-                    img {
-                        width: 270px;
-                        height: auto;
-                        position: static;
-                        transform: translateY(0);
-                    }
-                }
-                .rightbar {
-                    margin-left: 0;
-                }
-            }
-        }
+  .about {
+    height: auto;
+    .empty-container {
+      display: none;
     }
+    .about-container {
+      width: 100%;
+      padding: 100px 25px;
+      .up {
+        left: 0;
+      }
+      .bottom {
+        left: 0;
+      }
+      .about-content {
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 270px 1fr;
+        grid-template-areas: "img" "text";
+        grid-row-gap: 25px;
+        .rightbar {
+          grid-area: img;
+          display: flex;
+          justify-content: center;
+          img {
+            width: 270px;
+            height: auto;
+            position: static;
+            transform: translateY(0);
+          }
+        }
+        .leftbar {
+          grid-area: text;
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }

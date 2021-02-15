@@ -19,19 +19,19 @@ const About = ({data}) => {
     return (
         <>
             <section ref={ref} className='about section' id='about'>
-                <div className='empty-container' />
                 <div className='about-container'>
-                    <img className='vector up' src='images/vectors/vector_2.svg' alt='vector' />
-                    <img className='vector bottom' src='images/vectors/vector_3.svg' alt='vector' />
+                    <img className='vector up' src='images/vectors/vector_4.svg' alt='vector' />
+                    <img className='vector bottom' src='images/vectors/vector_5.svg' alt='vector' />
                     <div  className='about-content'>
-                        <motion.div  initial="hidden" animate={controls} variants={imageVariants} className='leftbar'>
-                            <img src='me.jpg' alt='me' />
-                        </motion.div>
-                        <div className='rightbar'>
+                        <div className='leftbar'>
                             <SectionText data={data} controls={controls}/>
                         </div>
+                        <motion.div  initial="hidden" animate={controls} variants={imageVariants} className='rightbar'>
+                            <img src='me.jpg' alt='me' />
+                        </motion.div>
                     </div>
                 </div>
+                <div className='empty-container' />
             </section>
         </>
     )

@@ -32,9 +32,10 @@ const Projects = ({data}) => {
     return (
         <>
             <section ref={ref} className='projects section' id='projects'>
+                <div className='empty-container' />
                 <div className='container'>
-                    <img className='vector up' src='images/vectors/vector_4.svg' alt='vector' />
-                    <img className='vector bottom' src='images/vectors/vector_5.svg' alt='vector' />
+                    <img className='vector up' src='images/vectors/vector_2.svg' alt='vector' />
+                    <img className='vector bottom' src='images/vectors/vector_3.svg' alt='vector' />
                     <div className='project-content'>
                         <motion.div initial="hidden" animate={controls} variants={cardVariants} className='leftbar'>
                             <div className='card-slider' style={{ transform: `translateX(${current}px)` }}>
@@ -51,7 +52,6 @@ const Projects = ({data}) => {
                         </div>
                     </div>
                 </div>
-                <div className='empty-container' />
             </section>
         </>
     )

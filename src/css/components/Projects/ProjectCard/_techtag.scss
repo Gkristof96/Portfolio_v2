@@ -1,0 +1,18 @@
+.tech-tag {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.2rem 0.4rem;
+  margin-left: 0;
+  background: color(primary);
+  border-radius: 5px;
+  color: color(light);
+  h3 {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    color: color(light);
+  }
+  .icon {
+    font-size: 1.2rem;
+  }
+}

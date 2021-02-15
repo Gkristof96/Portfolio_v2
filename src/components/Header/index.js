@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
-import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
+import { AiFillLinkedin } from 'react-icons/ai'
+import { FaGithubSquare } from 'react-icons/fa'
 import SideMenu from './SideMenu'
 import {motion} from 'framer-motion'
 import { iconVariants } from '../../animations/animation'
@@ -33,7 +34,7 @@ const Header = () => {
                     animate='visible'
                 >
                     <a href='https://www.linkedin.com/in/krist%C3%B3f-gerencs%C3%A9r-a91a27203/'><AiFillLinkedin className='icon'/></a>
-                    <AiFillGithub className='icon'/>
+                    <FaGithubSquare className='icon'/>
                 </motion.div>
             </header>
             <SideMenu handleOpen={handleOpen} isMenuOpen={isMenuOpen}/>
