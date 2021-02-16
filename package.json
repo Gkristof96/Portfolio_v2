@@ -15,6 +15,7 @@
     "react-intersection-observer": "^8.31.0",
     "react-scripts": "4.0.1",
     "react-scroll": "^1.8.1",
+    "react-touch-drag-slider": "^2.1.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

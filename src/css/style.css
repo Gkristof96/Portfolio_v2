@@ -1191,8 +1191,8 @@ footer .container .copyright::before {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 420px 1fr;
-      grid-template-columns: 420px 1fr;
+  -ms-grid-columns: 1fr 420px;
+      grid-template-columns: 1fr 420px;
 }
 
 .projects .container .project-content .leftbar {
@@ -1352,7 +1352,7 @@ footer .container .copyright::before {
   font-style: normal;
   font-weight: normal;
   font-size: clamp(0.8rem, 2vw, 1.3rem);
-  line-height: 28px;
+  line-height: 30px;
   text-align: justify;
   margin-bottom: 25px;
   color: #C4C4C4;

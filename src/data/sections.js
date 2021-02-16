@@ -7,7 +7,7 @@ export const sectionData = [
     {
         title: 'Projektek',
         description: 'Eddigi projektjeim',
-        text: 'Néhány projekt amiket korábban csináltam, van közte több különböző weboldal amikhez a React technológiát alkalmaztam.'
+        text: 'Néhány korábbi projektem amiken dolgoztam. Miközben ezeken dolgoztam több technológiát is volt lehetőségem megismerni, mint például a React vagy az Sass. Az oldalak elkészítéséhez a React Library használtam, valamint azok megtervezésében pedig a Figma tervező alkalmazás volt segítségemre.'
     },
     {
         title: 'Készségek',

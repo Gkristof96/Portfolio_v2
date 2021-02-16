@@ -37,19 +37,19 @@ const Projects = ({data}) => {
                     <img className='vector up' src='images/vectors/vector_2.svg' alt='vector' />
                     <img className='vector bottom' src='images/vectors/vector_3.svg' alt='vector' />
                     <div className='project-content'>
-                        <motion.div initial="hidden" animate={controls} variants={cardVariants} className='leftbar'>
-                            <div className='card-slider' style={{ transform: `translateX(${current}px)` }}>
-                                {projectData.map((data,i) => <ProjectCard data={data} key={i}/>)}
-                            </div>
-                        </motion.div>
+                        
                         <div className='rightbar'>
                             <SectionText data={data} controls={controls}/>
                             <motion.div initial="hidden" animate={controls} variants={pagerVariants} className='pager'>
                                 <FaCaretLeft className='icon' onClick={handleLeftClick}/>
                                 <FaCaretRight className='icon' onClick={handleRightClick}/>
                             </motion.div>
-                            
                         </div>
+                        <motion.div initial="hidden" animate={controls} variants={cardVariants} className='leftbar'>
+                            <div className='card-slider' style={{ transform: `translateX(${current}px)` }}>
+                                {projectData.map((data,i) => <ProjectCard data={data} key={i}/>)}
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
