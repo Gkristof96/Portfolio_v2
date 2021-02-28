@@ -1077,9 +1077,10 @@ footer .container .copyright::before {
 }
 
 .project-card p {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
   color: #212112;
   text-align: justify;
+  text-justify: inter-character;
 }
 
 .project-card .tech-tags {
