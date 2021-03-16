@@ -78,7 +78,7 @@
     .container {
       padding-left: 40px;
       .project-content {
-        grid-template-columns: 290px 1fr;
+        grid-template-columns: 1fr 290px;
         .leftbar {
           align-items: flex-start;
           width: 290px;

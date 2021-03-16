@@ -7,7 +7,7 @@ export const projectData = [
     {
       name: 'Your Specialist',
       image: 'images/projects/project_6.png',
-      description: 'Jelenlegi projektem ami körülbelül 60%-os készültségi szinten áll jelenleg. Az oldal fő funkciója hogy szakemberek tudunk keresni települések és szakmák szerint, szakemberek regisztrálhatnak és létrehozhatnak maguknak egy profilt, ami így kereshetővé válik. Mivel még nincs kész a projekt ezért a linkek nem aktívak a projekthez',
+      description: 'Jelenleg aktív projektem, ami szakemberek település és szakma szerinti keresését teszi lehetővé, és az ehhez szükséges funkciókat valósítja meg. Mivel a projekt kb 60%-os ezért a linkek nem aktívak még.',
       deploy_link: '/',
       github_link: '/',
       tech_tags: [{ icon: <FaReact className='icon' />, name: 'React'}, { icon: <FaSass className='icon'/>, name: 'SCSS'},{ icon: <FaFigma className='icon'/>, name: 'Figma'}, { icon: <FiFramer className='icon'/>, name: 'Framer Motion'},{ icon: <FaNodeJs className='icon' />, name: 'NodeJs'},{ icon: <DiMongodb className='icon' />, name: 'MongoDB'}]

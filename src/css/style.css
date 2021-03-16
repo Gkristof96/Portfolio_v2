@@ -1080,7 +1080,7 @@ footer .container .copyright::before {
   font-size: clamp(0.8rem, 2vw, 1rem);
   color: #212112;
   text-align: justify;
-  text-justify: inter-character;
+  word-break: keep-all;
 }
 
 .project-card .tech-tags {
@@ -1130,7 +1130,7 @@ footer .container .copyright::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5rem;
+  padding: 0.4rem;
   margin: 0.2rem 0.4rem;
   margin-left: 0;
   background: #0092CA;
@@ -1140,12 +1140,12 @@ footer .container .copyright::before {
 
 .tech-tag h3 {
   margin-left: 5px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #ffffff;
 }
 
 .tech-tag .icon {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .projects {
@@ -1254,8 +1254,8 @@ footer .container .copyright::before {
     padding-left: 40px;
   }
   .projects .container .project-content {
-    -ms-grid-columns: 290px 1fr;
-        grid-template-columns: 290px 1fr;
+    -ms-grid-columns: 1fr 290px;
+        grid-template-columns: 1fr 290px;
   }
   .projects .container .project-content .leftbar {
     -webkit-box-align: start;

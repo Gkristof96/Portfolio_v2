@@ -1,7 +1,7 @@
 .tech-tag {
   display: flex;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.4rem;
   margin: 0.2rem 0.4rem;
   margin-left: 0;
   background: color(primary);
@@ -9,10 +9,10 @@
   color: color(light);
   h3 {
     margin-left: 5px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: color(light);
   }
   .icon {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
