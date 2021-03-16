@@ -1,8 +1,17 @@
-import { FaReact,FaSass,FaFigma } from 'react-icons/fa'
+import { FaReact,FaSass,FaFigma, FaNodeJs } from 'react-icons/fa'
 import { FiFramer } from 'react-icons/fi'
 import { AiFillApi } from 'react-icons/ai'
+import { DiMongodb } from 'react-icons/di'
 
 export const projectData = [
+    {
+      name: 'Your Specialist',
+      image: 'images/projects/project_6.png',
+      description: 'Jelenlegi projektem ami körülbelül 60%-os készültségi szinten áll jelenleg. Az oldal fő funkciója hogy szakemberek tudunk keresni települések és szakmák szerint, szakemberek regisztrálhatnak és létrehozhatnak maguknak egy profilt, ami így kereshetővé válik. Mivel még nincs kész a projekt ezért a linkek nem aktívak a projekthez',
+      deploy_link: '/',
+      github_link: '/',
+      tech_tags: [{ icon: <FaReact className='icon' />, name: 'React'}, { icon: <FaSass className='icon'/>, name: 'SCSS'},{ icon: <FaFigma className='icon'/>, name: 'Figma'}, { icon: <FiFramer className='icon'/>, name: 'Framer Motion'},{ icon: <FaNodeJs className='icon' />, name: 'NodeJs'},{ icon: <DiMongodb className='icon' />, name: 'MongoDB'}]
+    },
     {
       name: 'Gym site',
       image: 'images/projects/project_1.png',
