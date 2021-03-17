@@ -1,7 +1,8 @@
-import { FaReact,FaSass,FaFigma, FaNodeJs } from 'react-icons/fa'
+import { FaReact,FaSass,FaFigma, FaNodeJs, FaRProject } from 'react-icons/fa'
 import { FiFramer } from 'react-icons/fi'
 import { AiFillApi } from 'react-icons/ai'
 import { DiMongodb } from 'react-icons/di'
+import { SiRedux } from 'react-icons/si'
 
 export const projectData = [
     {
@@ -10,7 +11,7 @@ export const projectData = [
       description: 'Jelenleg aktív projektem, ami szakemberek település és szakma szerinti keresését teszi lehetővé, és az ehhez szükséges funkciókat valósítja meg. Mivel a projekt kb 60%-os ezért a linkek nem aktívak még.',
       deploy_link: '/',
       github_link: '/',
-      tech_tags: [{ icon: <FaReact className='icon' />, name: 'React'}, { icon: <FaSass className='icon'/>, name: 'SCSS'},{ icon: <FaFigma className='icon'/>, name: 'Figma'}, { icon: <FiFramer className='icon'/>, name: 'Framer Motion'},{ icon: <FaNodeJs className='icon' />, name: 'NodeJs'},{ icon: <DiMongodb className='icon' />, name: 'MongoDB'}]
+      tech_tags: [{ icon: <FaReact className='icon' />, name: 'React'},{ icon: <SiRedux className='icon' />, name: 'Redux'}, { icon: <FaSass className='icon'/>, name: 'SCSS'},{ icon: <FaFigma className='icon'/>, name: 'Figma'}, { icon: <FiFramer className='icon'/>, name: 'Framer Motion'},{ icon: <FaNodeJs className='icon' />, name: 'NodeJs'},{ icon: <DiMongodb className='icon' />, name: 'MongoDB'}]
     },
     {
       name: 'Gym site',
