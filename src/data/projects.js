@@ -1,4 +1,4 @@
-import { FaReact,FaSass,FaFigma, FaNodeJs, FaRProject } from 'react-icons/fa'
+import { FaReact,FaSass,FaFigma, FaNodeJs } from 'react-icons/fa'
 import { FiFramer } from 'react-icons/fi'
 import { AiFillApi } from 'react-icons/ai'
 import { DiMongodb } from 'react-icons/di'
