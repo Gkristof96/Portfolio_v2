@@ -8,9 +8,9 @@ export const projectData = [
     {
       name: 'Your Specialist',
       image: 'images/projects/project_6.png',
-      description: 'Jelenleg aktív projektem, ami szakemberek település és szakma szerinti keresését teszi lehetővé, és az ehhez szükséges funkciókat valósítja meg. Mivel a projekt kb 60%-os ezért a linkek nem aktívak még.',
-      deploy_link: '/',
-      github_link: '/',
+      description: 'Jelenleg aktív projektem, ami szakemberek település és szakma szerinti keresését teszi lehetővé, és az ehhez szükséges funkciókat valósítja meg. A project jelenleg 80%-os készültségi szinten van.',
+      deploy_link: 'https://www.figma.com/file/oQyHIgoTKudLshortAh3Q3/Your-Specialist_v3?node-id=0%3A1',
+      github_link: 'https://github.com/Gkristof96/Your-specilist_v2',
       tech_tags: [{ icon: <FaReact className='icon' />, name: 'React'},{ icon: <SiRedux className='icon' />, name: 'Redux'}, { icon: <FaSass className='icon'/>, name: 'SCSS'},{ icon: <FaFigma className='icon'/>, name: 'Figma'}, { icon: <FiFramer className='icon'/>, name: 'Framer Motion'},{ icon: <FaNodeJs className='icon' />, name: 'NodeJs'},{ icon: <DiMongodb className='icon' />, name: 'MongoDB'}]
     },
     {
