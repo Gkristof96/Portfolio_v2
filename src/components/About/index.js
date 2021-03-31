@@ -27,7 +27,7 @@ const About = ({data}) => {
                             <SectionText data={data} controls={controls}/>
                         </div>
                         <motion.div  initial="hidden" animate={controls} variants={imageVariants} className='rightbar'>
-                            <img src='me.jpg' alt='me' />
+                            <img src='me.webp' alt='me' />
                         </motion.div>
                     </div>
                 </div>

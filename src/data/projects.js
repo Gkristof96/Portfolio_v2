@@ -7,7 +7,7 @@ import { SiRedux } from 'react-icons/si'
 export const projectData = [
     {
       name: 'Your Specialist',
-      image: 'images/projects/project_6.png',
+      image: 'images/projects/project_6.webp',
       description: 'Jelenleg aktív projektem, ami szakemberek település és szakma szerinti keresését teszi lehetővé, és az ehhez szükséges funkciókat valósítja meg. A project jelenleg 80%-os készültségi szinten van.',
       deploy_link: 'https://www.figma.com/file/oQyHIgoTKudLshortAh3Q3/Your-Specialist_v3?node-id=0%3A1',
       github_link: 'https://github.com/Gkristof96/Your-specilist_v2',
@@ -15,7 +15,7 @@ export const projectData = [
     },
     {
       name: 'Gym site',
-      image: 'images/projects/project_1.png',
+      image: 'images/projects/project_1.webp',
       description: 'Egyoldalas weboldal megoldás egy kitalált edzőterem számára. Az oldal tartalmaz egy reszponzív navigációs menüt, informácios kártyákat, és egy kapcsolat formot.',
       deploy_link: 'https://kristof-gym-2.netlify.app',
       github_link: 'https://github.com/Gkristof96/Brand_v2',
@@ -23,7 +23,7 @@ export const projectData = [
     },
     {
       name: 'Todo app',
-      image: 'images/projects/project_2.png',
+      image: 'images/projects/project_2.webp',
       description: 'Az elvégzendő fontos teendőink nyilvántartására, és kezelésére használható webes alkalmazás, lehetőség van új teendők hozzáadására, a meglévők törlésére, vagy elvégzetre állítására.',
       deploy_link: 'https://kristof-todo.netlify.app',
       github_link: 'https://github.com/Gkristof96/Todo-app',
@@ -31,7 +31,7 @@ export const projectData = [
     },
     {
       name: 'Weather app',
-      image: 'images/projects/project_3.png',
+      image: 'images/projects/project_3.webp',
       description: 'Időjárás lekérdező alkalmazás, amely képes megmutatni az aktuális időjárási viszonyokat településenként. Az adatok forrása az OpenWeather Api.',
       deploy_link: 'https://kristof-weather.netlify.app',
       github_link: 'https://github.com/Gkristof96/Weather-app',
@@ -39,7 +39,7 @@ export const projectData = [
     },
     {
       name: 'Old Gym site',
-      image: 'images/projects/project_5.png',
+      image: 'images/projects/project_5.webp',
       description: 'Régebbi verzió az egyoldalas fiktiv edzőtermi weboldalra, reszponzív navigációs menü, információs kártyák, üzenetküldő formot tartalmaz.',
       deploy_link: 'https://kristof-gym.netlify.app',
       github_link: 'https://github.com/Gkristof96/Brand',
@@ -47,7 +47,7 @@ export const projectData = [
     },
     {
       name: 'Old Portfolio',
-      image: 'images/projects/project_4.png',
+      image: 'images/projects/project_4.webp',
       description: 'Ennek a portfolió oldalnak a régebbi verziója, egyszerűbb, de reszponzív designal, kontakt űrlappal.',
       deploy_link: 'https://kristof-portfolio.netlify.app',
       github_link: 'https://github.com/Gkristof96/Portfolio',
