@@ -6,7 +6,7 @@ export const contactData = [
         icon: <FaEnvelope className="icon" />
     },
     {
-        info: '+36 30 1234 567',
+        info: '+36 30 879 8878',
         icon: <FaPhoneAlt className="icon" />
     },
     {
