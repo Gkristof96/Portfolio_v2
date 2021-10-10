@@ -6,7 +6,7 @@
 * Sass
 * Figma
 
-Az oldal saját magam és korábbi munkáim bemutatására készült. Ennek megfelelően három elkülöníthető részre osztható amik a következőek:
+Az oldal saját magam és korábbi munkáim bemutatására készült. Ennek megfelelően négy elkülöníthető részre osztható amik a következőek:
 
 - Bemutatkozás : Saját magam személyes bemutatása.
 - Készségek : Szakmai bemutatkozásom, technológiai stack bemutatása.
